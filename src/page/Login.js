@@ -54,16 +54,9 @@ function Login() {
               </MDBBtn>
 
               <MDBBtn tag='a' color='none' className='m-1' style={{ color: '#1266f1' }}>
-                <MDBIcon fab icon='twitter' size="sm"/>
-              </MDBBtn>
-
-              <MDBBtn tag='a' color='none' className='m-1' style={{ color: '#1266f1' }}>
                 <MDBIcon fab icon='google' size="sm"/>
               </MDBBtn>
 
-              <MDBBtn tag='a' color='none' className='m-1' style={{ color: '#1266f1' }}>
-                <MDBIcon fab icon='github' size="sm"/>
-              </MDBBtn>
             </div>
 
             <p className="text-center mt-3">or:</p>
@@ -91,18 +84,11 @@ function Login() {
               <MDBBtn tag='a' color='none' className='m-1' style={{ color: '#1266f1' }}>
                 <MDBIcon fab icon='facebook-f' size="sm"/>
               </MDBBtn>
-
-              <MDBBtn tag='a' color='none' className='m-1' style={{ color: '#1266f1' }}>
-                <MDBIcon fab icon='twitter' size="sm"/>
-              </MDBBtn>
-
+              
               <MDBBtn tag='a' color='none' className='m-1' style={{ color: '#1266f1' }}>
                 <MDBIcon fab icon='google' size="sm"/>
               </MDBBtn>
-
-              <MDBBtn tag='a' color='none' className='m-1' style={{ color: '#1266f1' }}>
-                <MDBIcon fab icon='github' size="sm"/>
-              </MDBBtn>
+             
             </div>
 
             <p className="text-center mt-3">or:</p>
