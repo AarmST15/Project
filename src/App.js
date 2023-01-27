@@ -1,11 +1,11 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import NavbarComp from './components/NavbarComp';
+import NavbarC from './components/NavbarC';
 import Footer from './page/Footer';
 function App() {
   return (
     <div className="App">
-      <NavbarComp/>
+      <NavbarC/>
     <div>
       <Footer/>
     </div>

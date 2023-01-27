@@ -21,9 +21,14 @@ html {
 }
 
 .app-in-grid {
+    text-align: right;
     margin: 15px;
     border: 10px ;
     border-top-left-radius:30px ;
     background-color:#C09A51;
 }
 
+.bg-header{
+    background-image:url('/public/images/cafe-02.jpg');
+    height: 400px;
+}
