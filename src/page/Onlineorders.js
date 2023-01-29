@@ -1,7 +1,8 @@
 import React from 'react'
 import Menuitem from '../components/Menuitem'
+import './Onlineorders.css'
 
-function Onlineoders() {
+function Onlineorders() {
   return (
     <div className='order-line'>Online oders
     <div>
@@ -11,4 +12,4 @@ function Onlineoders() {
   )
 }
 
-export default Onlineoders
+export default Onlineorders

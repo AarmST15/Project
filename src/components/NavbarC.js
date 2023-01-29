@@ -12,7 +12,7 @@ import {
 } from 'mdb-react-ui-kit';
 import { BrowserRouter, Routes, Route} from 'react-router-dom'
 import Home from '../page/Home';
-import Onlineoders from '../page/Onlineoders';
+import Onlineorders from '../page/Onlineorders';
 import Contact from '../page/Contact';
 import Login from '../page/Login';
 
@@ -43,7 +43,7 @@ export default function App() {
                 </MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
-                <MDBNavbarLink href='/onlineorders'>Online oders</MDBNavbarLink>
+                <MDBNavbarLink href='/onlineorders'>Online orders</MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
                 <MDBNavbarLink href='/about'>About</MDBNavbarLink>
@@ -57,7 +57,7 @@ export default function App() {
       </MDBNavbar>
         <Routes>
                 <Route path = "/" element={<Home/>}/>
-                <Route path = "/onlineorders" element={<Onlineoders/>}/>
+                <Route path = "/onlineorders" element={<Onlineorders/>}/>
                 <Route path = "/about" element={<Contact/>}/>
                 <Route path = "/login" element={<Login/>}/> 
         </Routes>

@@ -20,7 +20,7 @@ export default function Home() {
         className='p-5 text-center bg-image bg-header'
         
       >
-        <div className='mask' style={{ backgroundColor: 'rgba(0, 0, 0, 0.6)' }}>
+        <div className='mask' style={{ backgroundColor: 'rgba(255, 150, 80, 0.5)' }}>
           <div className='d-flex justify-content-center align-items-center h-100'>
             <div className='text-white'>
               <h1 className='mb-3'>POS</h1>
