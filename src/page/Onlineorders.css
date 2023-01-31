@@ -1,3 +1,14 @@
 .order-line{
+    color: #000;
+    
     background-color: #FAEBCD;
+}
+
+.order-select-grig{
+    margin: 15px;
+    
+}
+
+.order-item{
+    margin: 5%;
 }

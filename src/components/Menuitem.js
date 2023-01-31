@@ -6,7 +6,8 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import Menupopup from './Menupopup.js';
 
-export default function ActionAreaCard() {
+export default function ActionAreaCard(props) {
+  const { coffee, onCoffeeClick }= props;
   return (
     <div className='card-item'>
     <Card sx={{ maxWidth: 300 }}>

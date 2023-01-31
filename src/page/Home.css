@@ -32,3 +32,9 @@ html {
     background-image:url('/public/images/cafe-02.jpg');
     height: 400px;
 }
+
+.carousel-stye{
+    margin: 15px;
+    border: 10px ;
+    border-radius: 15px;
+}

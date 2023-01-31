@@ -11,21 +11,21 @@ import {
 } from 'mdb-react-ui-kit';
 
 export default function Menupopup() {
-  const [basicModal, setBasicModal] = useState(false);
+  const [centralModal, setBasicModal] = useState(false);
 
-  const toggleShow = () => setBasicModal(!basicModal);
+  const toggleShow = () => setBasicModal(!centralModal);
 
   return (
     <>
       <MDBBtn onClick={toggleShow}>LAUNCH DEMO MODAL</MDBBtn>
-      <MDBModal show={basicModal} setShow={setBasicModal} tabIkndex='-1'>
+      <MDBModal show={centralModal} setShow={setBasicModal} tabIkndex='-1'>
         <MDBModalDialog>
           <MDBModalContent>
             <MDBModalHeader>
               <MDBModalTitle>Modal title</MDBModalTitle>
               <MDBBtn className='btn-close' color='none' onClick={toggleShow}></MDBBtn>
             </MDBModalHeader>
-            <MDBModalBody>...</MDBModalBody>
+            <MDBModalBody>  </MDBModalBody>
 
             <MDBModalFooter>
               <MDBBtn color='secondary' onClick={toggleShow}>
