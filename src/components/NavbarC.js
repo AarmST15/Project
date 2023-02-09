@@ -15,6 +15,11 @@ import Home from '../page/Home';
 import Onlineorders from '../page/Onlineorders';
 import Contact from '../page/Contact';
 import Login from '../page/Login';
+import MNGhome from '../page/manager/MNGhome'
+import MNGsetting from '../page/manager/MNGsetting';
+import MNGorder from '../page/manager/MNGorder';
+import MNGstatement from '../page/manager/MNGstatement';
+
 
 export default function App() {
     const [showNavColorSecond, setShowNavColorSecond] = useState(false); 
@@ -51,6 +56,9 @@ export default function App() {
               <MDBNavbarItem>
                 <MDBNavbarLink href='/login'>Login</MDBNavbarLink>
               </MDBNavbarItem>
+              <MDBNavbarItem>
+                <MDBNavbarLink href='/mnghome'>test</MDBNavbarLink>
+              </MDBNavbarItem>
             </MDBNavbarNav>
           </MDBCollapse>
         </MDBContainer>
@@ -60,6 +68,10 @@ export default function App() {
                 <Route path = "/onlineorders" element={<Onlineorders/>}/>
                 <Route path = "/about" element={<Contact/>}/>
                 <Route path = "/login" element={<Login/>}/> 
+                <Route path = "/mnghome" element={<MNGhome/>}/> 
+                <Route path = "/setting" element={<MNGsetting/>}/> 
+                <Route path = "/order" element={<MNGorder/>}/>
+                <Route path = "/statement" element={<MNGstatement/>}/>
         </Routes>
     </BrowserRouter>
 

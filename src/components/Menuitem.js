@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
@@ -8,6 +8,18 @@ import Menupopup from './Menupopup.js';
 
 export default function ActionAreaCard(props) {
   const { coffee, onCoffeeClick }= props;
+
+  const [centralModal, setBasicModal] = useState(false);
+
+
+  // function handleClick(status){
+  //   setBasicModal(status);
+
+  //   return centralModal;
+  // }
+
+
+  
   return (
     <div className='card-item'>
     <Card sx={{ maxWidth: 300 }}>
@@ -18,7 +30,8 @@ export default function ActionAreaCard(props) {
           image="./images/coffee-01.jpg"
           alt="coffee"
         />
-        <CardContent>
+        <CardContent
+         >
           <Typography gutterBottom variant="h5" component="div">
             Espresso
           </Typography>
