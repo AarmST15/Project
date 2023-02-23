@@ -3,7 +3,7 @@ import MNGcard from './MNGcard'
 
 function MNGhome() {
   return (
-    <div>MNGhome
+    <div>
         <div>
             <MNGcard/>
         </div>

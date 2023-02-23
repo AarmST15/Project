@@ -19,7 +19,9 @@ import MNGhome from '../page/manager/MNGhome'
 import MNGsetting from '../page/manager/MNGsetting';
 import MNGorder from '../page/manager/MNGorder';
 import MNGstatement from '../page/manager/MNGstatement';
-
+import MNGorderhistory from '../page/manager/MNGorderhistory';
+import MNGbill from '../page/manager/MNGbill';
+import MNGstateday from '../page/manager/MNGstateday';
 
 export default function App() {
     const [showNavColorSecond, setShowNavColorSecond] = useState(false); 
@@ -72,6 +74,9 @@ export default function App() {
                 <Route path = "/setting" element={<MNGsetting/>}/> 
                 <Route path = "/order" element={<MNGorder/>}/>
                 <Route path = "/statement" element={<MNGstatement/>}/>
+                <Route path = "/orderhis" element={<MNGorderhistory/>}/>
+                <Route path = "/bill" element={<MNGbill/>}/>
+                <Route path = "/stateday" element={<MNGstateday/>}/>
         </Routes>
     </BrowserRouter>
 

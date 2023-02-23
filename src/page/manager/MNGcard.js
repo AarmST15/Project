@@ -10,17 +10,14 @@ import {
   MDBRow,
   MDBCol
 } from 'mdb-react-ui-kit';
-import { BrowserRouter, Routes, Route} from 'react-router-dom'
-import MNGsetting from './MNGsetting';
-import MNGorder from './MNGorder';
-import MNGstatement from './MNGstatement';
+
 
 export default function MNGcard() {
   return (
     //card 1-3
     <>
     
-    <MDBRow className='row-cols-1 row-cols-md-5 g-3 center'>
+    <MDBRow className='row-cols-1 row-cols-md-3 g-5 card-mng'>
     
       <MDBCol>
         <MDBCard className='h-100'>

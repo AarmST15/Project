@@ -1,9 +1,10 @@
 import React from 'react'
 
-function Contact() {
-    return (
-        <div>
-            Contact
+function Tablemenu() {
+  return (
+    <div>
+      Tablemenu
+       
             <div class="container"></div>                   
             <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                         <div class="modal-header">
@@ -17,7 +18,7 @@ function Contact() {
                             <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
                             <button data-dismiss="modal" class="btn red" id="btnYes">Confirm</button>
                         </div>
-                </div><table class="table table-striped table-hover table-users">
+        </div><table class="table table-striped table-hover table-users">
     			<thead>
     				<tr>
     					
@@ -69,11 +70,9 @@ function Contact() {
 	               </tbody>
 
     		</table>
-            
         </div>
-        
-    )
-        
+    
+  )
 }
 
-export default Contact
+export default Tablemenu

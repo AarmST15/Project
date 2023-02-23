@@ -24,8 +24,10 @@ export default function Menuselect() {
           onChange={handleChange}
         >
           <MenuItem value={10}>All</MenuItem>
-          <MenuItem value={20}>Drink</MenuItem>
-          <MenuItem value={30}>Food & Desert</MenuItem>
+          <MenuItem value={20}>Coffee</MenuItem>
+          <MenuItem value={20}>Tea</MenuItem>
+          <MenuItem value={20}>Milk</MenuItem>
+          <MenuItem value={30}>Bakery & Sweet</MenuItem>
         </Select>
       </FormControl>
     </Box>

@@ -16,3 +16,14 @@ html {
     display: block;
     width: 100%;
   }
+
+.img-modal{
+  border-radius: 50%;
+  width: 100px;
+  border: 1px ;
+}
+
+.text-modal{
+  text-align: end;
+  
+}
