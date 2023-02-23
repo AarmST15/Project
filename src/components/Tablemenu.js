@@ -22,13 +22,13 @@ function Tablemenu() {
     			<thead>
     				<tr>
     					
-    					<th class="hidden-phone">Usuario</th>
-    					<th>Nombre</th>
-    					<th>Apellido</th>
-    					<th class="hidden-phone">Email</th>
-    					<th class="hidden-phone">Provincia</th>
-    					<th class="hidden-phone">Miembro desde</th>
-    					<th>Estado</th>
+    					<th class="hidden-phone">id menu</th>
+    					<th>menuname</th>
+    					<th>price</th>
+    					<th class="hidden-phone">details</th>
+    					<th class="hidden-phone">img.</th>
+    					<th class="hidden-phone">type</th>
+    					<th>date</th>
     					<th></th>
     					<th></th>
     				</tr>
