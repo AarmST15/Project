@@ -15,10 +15,10 @@ function MNGstateday() {
       <MDBTable>
       <MDBTableHead>
         <tr>
-          <th scope='col'>#</th>
-          <th scope='col'>First</th>
-          <th scope='col'>Last</th>
-          <th scope='col'>Handle</th>
+          <th scope='col'>id menu</th>
+          <th scope='col'>menuname</th>
+          <th scope='col'>quantity</th>
+          <th scope='col'>total</th>
         </tr>
       </MDBTableHead>
       <MDBTableBody>

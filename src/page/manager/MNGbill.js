@@ -15,10 +15,11 @@ function MNGbill() {
       <MDBTable>
       <MDBTableHead>
         <tr>
-          <th scope='col'>#</th>
-          <th scope='col'>First</th>
-          <th scope='col'>Last</th>
-          <th scope='col'>Handle</th>
+          <th scope='col'>id payment</th>
+          <th scope='col'>menuname</th>
+          <th scope='col'>nubertable</th>
+          <th scope='col'>total</th>
+          <th scope='col'>date</th>
         </tr>
       </MDBTableHead>
       <MDBTableBody>
