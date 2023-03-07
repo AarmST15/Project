@@ -1,79 +1,43 @@
-import React from 'react'
+import * as React from 'react';
+import { styled } from '@mui/material/styles';
+import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper';
+import Grid from '@mui/material/Grid';
+import Menuselect from '../components/Menuselect'
+import CustomizedBadges from '../components/Badge';
 
-function Contact() {
-    return (
-        <div>
-            Contact
-            <div class="container"></div>                   
-            <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-                            <h3 id="myModalLabel">Delete</h3>
-                        </div>
-                        <div class="modal-body">
-                            <p></p>
-                        </div>
-                        <div class="modal-footer">
-                            <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-                            <button data-dismiss="modal" class="btn red" id="btnYes">Confirm</button>
-                        </div>
-                </div><table class="table table-striped table-hover table-users">
-    			<thead>
-    				<tr>
-    					
-    					<th class="hidden-phone">Usuario</th>
-    					<th>Nombre</th>
-    					<th>Apellido</th>
-    					<th class="hidden-phone">Email</th>
-    					<th class="hidden-phone">Provincia</th>
-    					<th class="hidden-phone">Miembro desde</th>
-    					<th>Estado</th>
-    					<th></th>
-    					<th></th>
-    				</tr>
-    			</thead>
+import './Contact.css'
 
-    			<tbody>
-    				
-    				<tr>
-                        
-    					<td class="hidden-phone">johnny</td>
-    					<td>john</td>
-    					<td>doe</td>
-    					<td class="hidden-phone">dsd@gmail.com</td>
-    					<td class="hidden-phone">active</td>
-                      <td class="hidden-phone">10/12/1999</td>
-    					   					
-                    	<td><span class="label label-warning">Not Active</span></td>
-                    	  					
-    					<td><a class="btn mini blue-stripe" href="{site_url()}admin/editFront/1">Edit</a></td>
+const Item = styled(Paper)(({ theme }) => ({
+  backgroundColor: theme.palette.mode === 'dark' ? 'rgba(0, 0, 0, 0.0)' : 'rgba(0, 0, 0, 0.0)',
+  ...theme.typography.body2,
+  padding: theme.spacing(1),
+  textAlign: 'center',
+  color: theme.palette.text.secondary,
+}));
 
-                        <td><a href="#" class="confirm-delete btn mini red-stripe" role="button" data-title="johnny" data-id="1">Delete</a></td>
-                    </tr>
-					<tr>
-                        
-    					<td class="hidden-phone">kitty</td>
-    					<td>jane</td>
-    					<td>doe</td>
-    					<td class="hidden-phone">dasasasd@gmail.com</td>
-    					<td class="hidden-phone">active</td>
-                      <td class="hidden-phone">10/1/1999</td>
-    					   					
-                    	<td><span class="label label-danger">Activo</span></td>
-                    	  					
-    					<td><a class="btn mini blue-stripe" href="{site_url()}admin/editFront/2">Edit</a></td>
-
-                        <td><a href="#" class="confirm-delete btn mini red-stripe" role="button" data-title="kitty" data-id="2">Delete</a></td>
-                    </tr>
-                
-	               </tbody>
-
-    		</table>
-            
-        </div>
-        
-    )
-        
+export default function FullWidthGrid() {
+  return (
+    <div className='contact-page'>
+    <Box sx={{ flexGrow: 1 }} style={{margin:"15px"}}>
+      <Grid container spacing={2}>
+        <Grid item xs={6} md={4}>
+          <img class="overflow-hidden" style={{borderRadius:"2%" ,height:"250px" ,width:"250px" }} src='./images/Bodyhome-2.jpg'/>
+        </Grid>
+        <Grid item xs={6} md={8} >
+          	<Item style={{height:"250px", background:"#C09A51"}}>
+			<h4>Drink it and enjoy it.</h4>
+        		First I drink the coffee. Then I do the things
+			</Item>
+        </Grid>
+        <Grid item xs={6} md={6}>
+          <Item><Menuselect/></Item>
+        </Grid>
+        <Grid item xs={6} md={6}>
+          <Item><CustomizedBadges/></Item>
+        </Grid>
+      </Grid>
+    </Box>
+    </div>
+  );
 }
-
-export default Contact

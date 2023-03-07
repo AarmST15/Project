@@ -13,7 +13,7 @@ export default function Menuselect() {
   };
 
   return (
-    <Box sx={{ maxWidth: 150 }}>
+    <Box sx={{ maxWidth: 150 ,maxHeight: 100}}>
       <FormControl fullWidth>
         <InputLabel id="demo-simple-select-label">Type</InputLabel>
         <Select

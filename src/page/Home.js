@@ -12,8 +12,9 @@ function Home() {
         </header>
         
         <div className='carousel-stye'>
-          <Bodyhome/>
           <Carousel/>
+          <Bodyhome style={{border:"50px" }}/>
+          
         </div>   
           <div>
               <h2>Open</h2>

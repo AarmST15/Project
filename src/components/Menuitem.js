@@ -34,8 +34,7 @@ export default function ActionAreaCard(props) {
                     image="./images/coffee-01.jpg"
                     alt="coffee"
                     />
-                    <CardContent
-                    >
+                    <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
                         Espresso
                     </Typography>

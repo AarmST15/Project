@@ -71,13 +71,13 @@ export default function Badge() {
                             <td>@twitter</td>
                         </tr>
                     </MDBTableBody>
-                </MDBTable>                
+                </MDBTable>                 
 
                         <MDBRow>
-                            <MDBCol md='6'>
+                            <MDBCol md='3'>
                             Subtotal
                             </MDBCol>
-                            <MDBCol md='6'>
+                            <MDBCol md='3'>
                                 100 $
                             </MDBCol>
                         </MDBRow>                
@@ -103,10 +103,10 @@ export default function Badge() {
             
         {['Viwe Cart'].map((side) => (
         <React.Fragment key={side}>
-            <MDBBtn onClick={toggleDrawer(side, true)}>
+            <Button variant="contained" onClick={toggleDrawer(side, true)}>
                 {side}
                 <MDBBadge className='ms-2' color='danger' > 1 </MDBBadge>
-            </MDBBtn>          
+            </Button>          
           <Drawer
             side={side}
             open={state[side]}

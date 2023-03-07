@@ -22,6 +22,7 @@ import MNGstatement from '../page/manager/MNGstatement';
 import MNGorderhistory from '../page/manager/MNGorderhistory';
 import MNGbill from '../page/manager/MNGbill';
 import MNGstateday from '../page/manager/MNGstateday';
+import Profile from '../page/Profile'
 
 export default function App() {
     const [showNavColorSecond, setShowNavColorSecond] = useState(false); 
@@ -59,7 +60,7 @@ export default function App() {
                 <MDBNavbarLink href='/login'>Login</MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
-                <MDBNavbarLink href='/mnghome'>test</MDBNavbarLink>
+                <MDBNavbarLink href='/profile'>test</MDBNavbarLink>
               </MDBNavbarItem>
             </MDBNavbarNav>
           </MDBCollapse>
@@ -77,6 +78,7 @@ export default function App() {
                 <Route path = "/orderhis" element={<MNGorderhistory/>}/>
                 <Route path = "/bill" element={<MNGbill/>}/>
                 <Route path = "/stateday" element={<MNGstateday/>}/>
+                <Route path = "/profile" element={<Profile/>}/>
         </Routes>
     </BrowserRouter>
 
