@@ -13,7 +13,7 @@ export default function Menuselect() {
   };
 
   return (
-    <Box sx={{ maxWidth: 150 ,maxHeight: 100}}>
+    <Box sx={{ maxWidth: 200 ,maxHeight: 90}}>
       <FormControl fullWidth>
         <InputLabel id="demo-simple-select-label">Type</InputLabel>
         <Select
@@ -25,8 +25,8 @@ export default function Menuselect() {
         >
           <MenuItem value={10}>All</MenuItem>
           <MenuItem value={20}>Coffee</MenuItem>
-          <MenuItem value={20}>Tea</MenuItem>
-          <MenuItem value={20}>Milk</MenuItem>
+          <MenuItem value={21}>Tea</MenuItem>
+          <MenuItem value={22}>Milk</MenuItem>
           <MenuItem value={30}>Bakery & Sweet</MenuItem>
         </Select>
       </FormControl>

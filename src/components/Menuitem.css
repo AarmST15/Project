@@ -3,7 +3,7 @@ html {
 }
 
 .card-item{
-  margin: 20px;
+  margin: 1px;
 }
 
 .card-body{
@@ -25,5 +25,7 @@ html {
 
 .text-modal{
   text-align: end;
+  
+  
   
 }

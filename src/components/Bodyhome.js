@@ -6,13 +6,14 @@ export default function Bodyhome() {
   return (    
     <MDBRow className='grid-stye'>
       <MDBCol md='4' className='img-stye'>
-        <img class="overflow-hidden" style={{height:"250px" ,width:"250px" }} src='./images/Bodyhome-2.jpg'/>
+        <img class="overflow-hidden" style={{height:"400px" ,width:"400px" }} src='./images/Bodyhome-2.jpg'/>
       </MDBCol>
-      <MDBCol md='8' className='text-stye'>
+      <MDBCol md='7' className='text-stye'>
         <h4>Drink it and enjoy it.</h4>
         First I drink the coffee. Then I do the things       
       </MDBCol>
-    </MDBRow>   
+    </MDBRow>
+       
 
   );
 }

@@ -7,13 +7,15 @@ import Bodyhome from '../components/Bodyhome'
 function Home() {
   return (
     <div className='home'>
+    
         <header>          
            <Header/>          
         </header>
-        
-        <div className='carousel-stye'>
-          <Carousel/>
-          <Bodyhome style={{border:"50px" }}/>
+        <Carousel/>
+        <Bodyhome/>
+        <div className='carousel-stye' >
+          
+          
           
         </div>   
           <div>
