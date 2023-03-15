@@ -3,7 +3,7 @@ html {
 }
 
 .home {
-    background-image:url('/public/images/cafe-03.jpg');
+    background:lightyellow;
 }
 
 .carousel-stye{
