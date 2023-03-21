@@ -1,0 +1,15 @@
+.In-De-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 1px;
+    vertical-align: middle;
+}
+
+.text-num{
+    display: flex;
+    align-items: center;
+}

@@ -19,7 +19,27 @@ export default function Bodyhome() {
             </MDBCol>
         </MDBRow> */}
         <Grid container spacing={2} justifyContent="center"
-  alignItems="center">
+        alignItems="center">
+        <Grid item md="4" xs="auto" >
+            <img class="overflow-hidden" style={{height:"220px" ,width:"400px" }} src='./images/Bodyhome-4.jpg'/>
+            </Grid>
+            <Grid item xs="auto" md="8">
+            <h4>Drink it and enjoy it.</h4>
+                First I drink the coffee. Then I do the things  
+                </Grid>
+        </Grid>
+        <Grid container spacing={2} justifyContent="center"
+        alignItems="center">
+        <Grid item md="4" xs="auto" >
+            <img class="overflow-hidden" style={{height:"220px" ,width:"400px" }} src='./images/Bodyhome-4.jpg'/>
+            </Grid>
+            <Grid item xs="auto" md="8">
+            <h4>Drink it and enjoy it.</h4>
+                First I drink the coffee. Then I do the things  
+                </Grid>
+        </Grid>
+        <Grid container spacing={2} justifyContent="center"
+        alignItems="center">
         <Grid item md="4" xs="auto" >
             <img class="overflow-hidden" style={{height:"220px" ,width:"400px" }} src='./images/Bodyhome-4.jpg'/>
             </Grid>
@@ -29,15 +49,7 @@ export default function Bodyhome() {
                 </Grid>
         </Grid>
     
-    <MDBRow  className='row-cols-1 '>
-        {/* <MDBCol xl='4'>
-          xl="4"
-        </MDBCol>
-        <MDBCol xl='8' >
-          xl="4"
-        </MDBCol> */}
-        
-      </MDBRow>
+    
    
 
 

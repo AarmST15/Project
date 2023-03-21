@@ -1,4 +1,3 @@
-//import React from 'react';
 import { MDBBadge, MDBBtn,MDBRow, MDBCol, MDBTable, MDBTableHead, MDBTableBody } from 'mdb-react-ui-kit';
 import * as React from 'react';
 import Box from '@mui/material/Box';
@@ -8,6 +7,12 @@ import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
+import { CardActionArea } from '@mui/material';
+import Grid from '@mui/material/Grid';
 
 import './Badge.css'
 import { positions } from '@mui/system';
@@ -44,43 +49,62 @@ export default function Badge() {
                     My Order
                 </h4>
                 <Divider/>
-                <MDBTable>
-                    <MDBTableHead>
-                        <tr>
-                        
-                        <th scope='col'>List</th>
-                        <th scope='col'>Quantity</th>
-                        <th scope='col'>Total</th>
-                        </tr>
-                    </MDBTableHead>
-                    <MDBTableBody>
-                        <tr>
-                        
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                        </tr>
-                        <tr>
-                        
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                        </tr>
-                        <tr>
-                            <td colSpan={2}>Larry the Bird</td>
-                            <td>@twitter</td>
-                        </tr>
-                    </MDBTableBody>
-                </MDBTable>                 
-
-                        <MDBRow>
-                            <MDBCol md='3'>
-                            Subtotal
-                            </MDBCol>
-                            <MDBCol md='3'>
-                                100 $
-                            </MDBCol>
-                        </MDBRow>                
+                <Card sx={{ maxWidth: 500, borderRadius: '1rem',background:"#EEEEEE" ,display:"center", margin:"5px" }}>
+                    <CardActionArea data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
+                        <CardContent>
+                            <Grid container spacing={2}>
+                                <Grid item xs={8} md={9}>
+                                    <Typography gutterBottom variant="h6" component="div" style={{display:"flex" }}>
+                                        #menuname
+                                    </Typography>
+                                    <Typography variant="body1" color="text.secondary" display="flex" >
+                                      <Grid container spacing={2}>
+                                      <Grid item xs={4} md={3}>
+                                        #type
+                                      </Grid>
+                                      <Grid item xs={4} md={3}>
+                                        #sweet    
+                                      </Grid> 
+                                      <Grid item xs={4} md={3}>
+                                        #short
+                                      </Grid>  
+                                      </Grid>
+                                    </Typography>
+                                    <Typography variant="body2" color="text.secondary" style={{display:"flex" }}>
+                                        #detail
+                                    </Typography>
+                                    
+                                </Grid>
+                                <Grid item xs={4} md={3}>
+                                <Typography variant="body1" display = "flex" justifyContent= "flex-end">
+                                        #price
+                                </Typography>
+                                <Grid item xs={12} md={12}>
+                                <Typography variant="body2" display = "flex" justifyContent= "flex-end" paddingTop="35px">
+                                        #quantity
+                                </Typography>
+                                        
+                                </Grid>                                
+                                </Grid>
+                            </Grid>
+                        </CardContent>
+                    </CardActionArea>
+                </Card>
+                      
+                <Grid container spacing={2}>
+                                <Grid item xs={8} md={9}>
+                                    <Typography gutterBottom variant="h8" component="div" style={{display:"flex" }}>
+                                        Total
+                                    </Typography>
+                                   
+                                    
+                                </Grid>
+                                <Grid item xs={4} md={3}>
+                                  <Typography variant="body1" display = "flex" justifyContent= "flex-end">
+                                        0 
+                                    </Typography>                               
+                                </Grid>
+                            </Grid>
                 
                 <List>
                     <Divider/>    

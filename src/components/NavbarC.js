@@ -23,6 +23,7 @@ import MNGorderhistory from '../page/manager/MNGorderhistory';
 import MNGbill from '../page/manager/MNGbill';
 import MNGstateday from '../page/manager/MNGstateday';
 import Profile from '../page/Profile'
+import Numberinde from '../components/Numberinde'
 
 export default function App() {
     const [showNavColorSecond, setShowNavColorSecond] = useState(false); 
@@ -79,6 +80,7 @@ export default function App() {
                 <Route path = "/bill" element={<MNGbill/>}/>
                 <Route path = "/stateday" element={<MNGstateday/>}/>
                 <Route path = "/profile" element={<Profile/>}/>
+                <Route path = "/numberinde" element={<Numberinde/>}/>
         </Routes>
     </BrowserRouter>
 
