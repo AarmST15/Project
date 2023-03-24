@@ -3,8 +3,8 @@ import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
-import CssBaseline from '@mui/material/CssBaseline';
-import Container from '@mui/material/Container';
+import NavbarC from '../components/NavbarC'
+import Footer from './Footer'
 
 import './Profile.css'
 
@@ -19,6 +19,9 @@ const Item = styled(Paper)(({ theme }) => ({
 export default function Profile() {
   return (
     <div style={{ backgroundColor: '#f4f5f7' }}>
+
+      <NavbarC/>
+
     <section className="vh-1000" style={{ backgroundColor: '#f4f5f7' }}>
       <MDBContainer className="py-5 h-100">
         <MDBRow className="justify-content-center align-items-center h-100">
@@ -65,7 +68,7 @@ export default function Profile() {
         </MDBRow>
       </MDBContainer>
     </section>
-    
+    <Footer/>
     </div>
   );
 }

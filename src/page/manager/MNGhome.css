@@ -1,0 +1,43 @@
+.App {
+    margin: auto;
+    max-width: 800px;
+    padding: 20px;
+  }
+  
+  .header {
+    text-align: center;
+  }
+  
+  .input-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .income-container {
+    margin-right: 20px;
+  }
+  
+  .expense-container {
+    margin-left: 20px;
+  }
+  
+  .result-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .income-result {
+    margin-right: 20px;
+  }
+  
+  .expense-result {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  
+  .balance-result {
+    margin-left: 20px;
+  }
+  

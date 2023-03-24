@@ -9,6 +9,8 @@ import {
   MDBModalBody,
   MDBModalFooter,
 } from 'mdb-react-ui-kit';
+import NavbarC from '../components/NavbarC'
+import Footer from './Footer'
 
 export default function Contact (props) {
   const [toggleOneModal, setToggleOneModal] = useState(false);
@@ -19,6 +21,7 @@ export default function Contact (props) {
 
   return (
     <>
+    <NavbarC/>
       <MDBBtn onClick={() => setToggleOneModal(!toggleOneModal)}>OPEN FIRST MODAL</MDBBtn>
 
         <MDBModal show={toggleOneModal} setShow={setToggleOneModal} tabIndex='-1'>
@@ -75,6 +78,7 @@ export default function Contact (props) {
           </MDBModalContent>
         </MDBModalDialog>
       </MDBModal>
+      <Footer/>
     </>
   );
 }

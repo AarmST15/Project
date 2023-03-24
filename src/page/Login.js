@@ -27,7 +27,7 @@ function Login() {
 
   return (
     <div style={{ background: '#FFFBEB' }}>
-    <MDBContainer className="p-3 d-flex flex-column" style={{ background: '#ECF9FF' }}>
+    <MDBContainer className="p-5 d-flex flex-column" style={{ background: '#ECF9FF' }}>
 
         <MDBTabs pills justify className='mb-3 d-flex flex-row justify-content-between'>
             <MDBTabsItem>
