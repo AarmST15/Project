@@ -1,0 +1,4 @@
+.fristpage-bg{
+    background: rgb(255,231,204);
+    background: linear-gradient(180deg, rgba(255,231,204,1) 0%, rgba(255,251,235,1) 35%, rgba(236,249,255,1) 100%);
+}

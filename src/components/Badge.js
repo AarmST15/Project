@@ -40,16 +40,17 @@ export default function Badge() {
       const list = (side) => (
         <Box
           sx={{ width: side === 'top' || side === 'bottom' ? 'auto' : 300 }}
+          style={{background:"#ECF9FF"}}
           role="presentation"
           onClick={toggleDrawer(side, false)}
           onKeyDown={toggleDrawer(side, false)}
           >
             
-                <h4>
+                <h4 style={{background:"#FFE7CC" , display:"center"}}>
                     My Order
                 </h4>
                 <Divider/>
-                <Card sx={{ maxWidth: 500, borderRadius: '1rem',background:"#EEEEEE" ,display:"center", margin:"5px" }}>
+                <Card sx={{ maxWidth: 500, borderRadius: '1rem',background:"#FFFBEB" ,display:"center", margin:"5px" }}>
                     <CardActionArea data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
                         <CardContent>
                             <Grid container spacing={2}>
@@ -110,7 +111,7 @@ export default function Badge() {
                     <Divider/>    
                 <ListItem disablePadding>
                     <ListItemButton 
-                      style={{positions:"center"}} 
+                      style={{display:"center" ,background:"#F8CBA6"}} 
                       data-toggle="modal" data-target="#GenQrcode" data-whatever="@mdo"
                       >
                         Submit
@@ -127,7 +128,7 @@ export default function Badge() {
             
         {['Viwe Cart'].map((side) => (
         <React.Fragment key={side}>
-            <Button variant="contained" onClick={toggleDrawer(side, true)}>
+            <Button variant="contained" onClick={toggleDrawer(side, true)} style={{background:"#F8CBA6"}}>
                 {side}
                 <MDBBadge className='ms-2' color='danger' > 1 </MDBBadge>
             </Button>          
@@ -140,6 +141,7 @@ export default function Badge() {
           </Drawer>
         </React.Fragment>
       ))}
+
       <div class="modal fade" id="GenQrcode" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
             <div class="modal-content">

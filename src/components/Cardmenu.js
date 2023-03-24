@@ -15,8 +15,8 @@ function Cardmenu(props) {
     <div>
         
             <MDBCol >
-                <Card sx={{ maxWidth: 500, borderBottomRightRadius: '5rem',borderTopRightRadius: '5rem',background:"#F7C873" ,display:"center"  }}>
-                    <CardActionArea data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
+                <Card sx={{ maxWidth: 500, borderBottomRightRadius: '5rem',borderTopRightRadius: '5rem',background:"#FFFBEB" ,display:"center"  }}>
+                    <CardActionArea data-toggle="modal" data-target="#exampleModal" >
                         <CardContent>
                             <Grid container spacing={2}>
                                 <Grid item xs={8} md={9}>
@@ -45,8 +45,11 @@ function Cardmenu(props) {
             
             {/* popup */}
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            
             <div class="modal-dialog" role="document">
+
                 <div class="modal-content">
+
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel">{coffee.title}</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -136,7 +139,7 @@ function Cardmenu(props) {
                                 </Grid>
                             </Grid>
                         </MDBRow>
-                        
+
                             <label for="recipient-name" class="col-form-label">Choose coffeeshot to your needs:</label>
 
                         <MDBRow className='row-cols-1 row-cols-md-3'>

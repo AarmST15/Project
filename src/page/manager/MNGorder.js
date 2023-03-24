@@ -13,7 +13,7 @@ function MNGorder() {
                 </ol>
             </nav>
             <div class="col-md-12 , histoy-button">
-                <button type="submit" class="btn btn-primary">Order History</button>
+                <button type="submit" class="btn btn-primary" href="/">Order History</button>
             </div>  
 
             <MDBRow className='grid-stye'>
