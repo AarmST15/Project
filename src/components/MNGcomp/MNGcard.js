@@ -21,7 +21,11 @@ export default function MNGcard() {
                 <Grid container spacing={2}>
                     <Grid item xs={6} md={3}>
                         <Item>
-                        <Grid item xs={6} md={3}>
+                        <Grid item xs={6} md={4}>
+                                                   
+                        
+                        </Grid>   
+                        <Grid item xs={6} md={8}>
                             All Spending                        
                         
                         </Grid>
