@@ -1,84 +1,38 @@
-import React, { useState } from 'react';
-import {
-  MDBBtn,
-  MDBModal,
-  MDBModalDialog,
-  MDBModalContent,
-  MDBModalHeader,
-  MDBModalTitle,
-  MDBModalBody,
-  MDBModalFooter,
-} from 'mdb-react-ui-kit';
-import NavbarC from '../components/NavbarC'
-import Footer from './Footer'
+import * as React from 'react';
+import PropTypes from 'prop-types';
+import Typography from '@mui/material/Typography';
+import Skeleton from '@mui/material/Skeleton';
+import Grid from '@mui/material/Grid';
 
-export default function Contact (props) {
-  const [toggleOneModal, setToggleOneModal] = useState(false);
-  
-  const [toggleTwoModal, setToggleTwoModal] = useState(false);
+const variants = ['h1', 'h3', 'body1', 'caption'];
 
-  const {coffee} = props;
+function TypographyDemo(props) {
+  const { loading = false } = props;
 
   return (
-    <>
-    <NavbarC/>
-      <MDBBtn onClick={() => setToggleOneModal(!toggleOneModal)}>OPEN FIRST MODAL</MDBBtn>
+    <div>
+      {variants.map((variant) => (
+        <Typography component="div" key={variant} variant={variant}>
+          {loading ? <Skeleton /> : variant}
+        </Typography>
+      ))}
+    </div>
+  );
+}
 
-        <MDBModal show={toggleOneModal} setShow={setToggleOneModal} tabIndex='-1'>
-            <MDBModalDialog centered>
-                <MDBModalContent>
-                    <MDBModalHeader>
-                        <MDBModalTitle>Modal 1</MDBModalTitle>
-                        <MDBBtn
-                            className='btn-close'
-                            color='none'
-                            onClick={() => setToggleOneModal(!toggleOneModal)}
-                        ></MDBBtn>
-                    </MDBModalHeader>
-                    <MDBModalBody>
-                        Show a second modal and hide this one with the button below.
-                    </MDBModalBody>
-                    <MDBModalFooter>
-                        <MDBBtn onClick={() => { setToggleOneModal(!toggleOneModal);
-                                                setTimeout(() => {
-                                                setToggleTwoModal(!toggleTwoModal); }, 
-                                                400);
-                                                }}  >
-                            Open second modal
-                        </MDBBtn>
-                    </MDBModalFooter>
-            </MDBModalContent>
-            </MDBModalDialog>
-        </MDBModal>
+TypographyDemo.propTypes = {
+  loading: PropTypes.bool,
+};
 
-      <MDBModal show={toggleTwoModal} setShow={setToggleTwoModal} tabIndex='-1'>
-        <MDBModalDialog centered>
-          <MDBModalContent>
-            <MDBModalHeader>
-              <MDBModalTitle>Modal 2</MDBModalTitle>
-              <MDBBtn
-                className='btn-close'
-                color='none'
-                onClick={() => setToggleTwoModal(!toggleTwoModal)}
-              ></MDBBtn>
-            </MDBModalHeader>
-            <MDBModalBody>Hide this modal and show the first with the button below.</MDBModalBody>
-            <MDBModalFooter>
-              <MDBBtn
-                onClick={() => {
-                  setToggleTwoModal(!toggleTwoModal);
-                  setTimeout(() => {
-                    setToggleOneModal(!toggleOneModal);
-                  }, 400);
-                }}
-              >
-                Back to first
-              </MDBBtn>
-            </MDBModalFooter>
-          </MDBModalContent>
-        </MDBModalDialog>
-      </MDBModal>
-      <Footer/>
-    </>
+export default function SkeletonTypography() {
+  return (
+    <Grid container spacing={8}>
+      <Grid item xs>
+        <TypographyDemo loading />
+      </Grid>
+      <Grid item xs>
+        <TypographyDemo />
+      </Grid>
+    </Grid>
   );
 }
