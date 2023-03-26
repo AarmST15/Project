@@ -6,7 +6,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import NavbarC from '../components/NavbarC'
-import Footer from './Footer'
+import Footer from '../components/Footer'
 
 function Onlineorders() {
   

@@ -5,7 +5,7 @@ import Carousel from '../components/Carousel'
 import Bodyhome from '../components/Bodyhome'
 import Box from '@mui/material/Box';
 import NavbarC from '../components/NavbarC'
-import Footer from './Footer'
+import Footer from '../components/Footer'
 
 function Home() {
   return (

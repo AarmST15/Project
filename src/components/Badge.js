@@ -9,13 +9,14 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import Grid from '@mui/material/Grid';
 
+
 import './Badge.css'
-import { positions } from '@mui/system';
+import Tabelpayment from './Tabelpayment';
+
 
 // function openNav() {
 //     document.getElementById("mySidenav").style.width = "250px";
@@ -46,7 +47,7 @@ export default function Badge() {
           onKeyDown={toggleDrawer(side, false)}
           >
             
-                <h4 style={{background:"#FFE7CC" , display:"center"}}>
+                <h4>
                     My Order
                 </h4>
                 <Divider/>
@@ -76,6 +77,7 @@ export default function Badge() {
                                     </Typography>
                                     
                                 </Grid>
+
                                 <Grid item xs={4} md={3}>
                                 <Typography variant="body1" display = "flex" justifyContent= "flex-end">
                                         #price
@@ -112,7 +114,7 @@ export default function Badge() {
                 <ListItem disablePadding>
                     <ListItemButton 
                       style={{display:"center" ,background:"#F8CBA6"}} 
-                      data-toggle="modal" data-target="#GenQrcode" data-whatever="@mdo"
+                      data-toggle="modal" data-target="#Payment" data-whatever="@mdo"
                       >
                         Submit
                     </ListItemButton>
@@ -142,11 +144,31 @@ export default function Badge() {
         </React.Fragment>
       ))}
 
-      <div class="modal fade" id="GenQrcode" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal fade" id="Payment" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Payment</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                <div class="modal-body">              
+                    <Tabelpayment/>
+                    
+                </div>
+                <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#GenQrcode">Submit</button>
+                </div>
+                </div>
+            </div> 
+        </div>
+
+        <div class="modal fade" id="GenQrcode" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Payment</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Qrcode</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>

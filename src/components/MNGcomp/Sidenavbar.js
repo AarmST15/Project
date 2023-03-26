@@ -9,17 +9,28 @@ import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import Tooltip from '@mui/material/Tooltip';
 import Apphead from './Apphead';
-import MNGcard from './MNGcard';
+import './Sidenavbar.css'
+
 
 function Sidenavbar() {
-    const { collapseSidebar } = useProSidebar();
+    const { collapseSidebar} = useProSidebar();
+    
   return (
-    <div id="app" style={({ height: "100vh" }, { display: "flex" })}>
-        <Sidebar style={{ height: "100vh" ,background: '#146C94'}}>
+    <div id="app" style={({ height: "100%" }, { display: "flex" , flexDirection: "row"})}>
+        <Sidebar 
+            backgroundColor="rgb(136, 204, 224, 0.5)"  
+            style={{height: "100vh" , 
+                    position: "fixed" , 
+                    top: "0", 
+                    left: "0",
+                    marginBlock:"64px" ,
+                    backdropFilter:"blur(6px)"
+                    
+                    }}>
             <Menu>
                 
                 <MenuItem
-                    icon={<MenuOutlinedIcon />}
+                    icon={<MenuOutlinedIcon className='side-color'/>}
                     onClick={() => {
                     collapseSidebar();
                     }}
@@ -30,22 +41,23 @@ function Sidenavbar() {
                 </MenuItem>
                 
                 <Tooltip title="Home" placement="left">
-                    <MenuItem icon={<HomeOutlinedIcon />}>Home</MenuItem>
+                    <MenuItem icon={<HomeOutlinedIcon className='side-color'/>}>Home</MenuItem>
+                </Tooltip>
+                <Tooltip title="Order List" placement="left">
+                    <MenuItem icon={<ReceiptOutlinedIcon className='side-color'/>}>Order List</MenuItem>
+                </Tooltip>
+                <Tooltip title="Clients" placement="left">
+                    <MenuItem icon={<PeopleOutlinedIcon className='side-color'/>}>Clients</MenuItem>
                 </Tooltip>
                 <Tooltip title="Home" placement="left">
-                    <MenuItem icon={<PeopleOutlinedIcon />}>Clients</MenuItem>
+                    <MenuItem icon={<ContactsOutlinedIcon className='side-color'/>}>Contacts</MenuItem>
+                </Tooltip>
+                
+                <Tooltip title="Home" placement="left">
+                    <MenuItem icon={<HelpOutlineOutlinedIcon className='side-color'/>}>FAQ</MenuItem>
                 </Tooltip>
                 <Tooltip title="Home" placement="left">
-                    <MenuItem icon={<ContactsOutlinedIcon />}>Contacts</MenuItem>
-                </Tooltip>
-                <Tooltip title="Home" placement="left">
-                    <MenuItem icon={<ReceiptOutlinedIcon />}>Profile</MenuItem>
-                </Tooltip>
-                <Tooltip title="Home" placement="left">
-                    <MenuItem icon={<HelpOutlineOutlinedIcon />}>FAQ</MenuItem>
-                </Tooltip>
-                <Tooltip title="Home" placement="left">
-                    <MenuItem icon={<CalendarTodayOutlinedIcon />}>Calendar</MenuItem>
+                    <MenuItem icon={<CalendarTodayOutlinedIcon className='side-color'/>}>Calendar</MenuItem>
                 </Tooltip>
             </Menu>
       </Sidebar>

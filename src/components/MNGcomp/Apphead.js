@@ -158,33 +158,20 @@ export default function Apphead () {
   return (
     
     <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="static" style={{background:"rgba(249,249,249,0.7)"}}>
-            <Toolbar>          
+        <AppBar position="static" style={{background:"rgba(249,249,249,0.1)" , backdropFilter:"blur(6px)", position: "fixed", top: "0", left: "0"}}>
+            <Toolbar style={{height:"64px"}}>          
                 <Typography
                     variant="h6"
                     noWrap
                     component="div"
-                    sx={{ display: { xs: 'none', sm: 'block' } ,color: '#146C94'}}
+                    sx={{ display: { xs: 'block', sm: 'block' } ,color: '#146C94'}}
                 >
                     SSIA
                 </Typography>
           
                 <Box sx={{ flexGrow: 1 }} />
                 <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-                    <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-                        <Badge badgeContent={4} color="error">
-                            <MailIcon style={{ color: '#146C94' }}/>
-                        </Badge>
-                    </IconButton>
-                    <IconButton
-                        size="large"
-                        aria-label="show 17 new notifications"
-                        color="inherit"
-                        >
-                        <Badge badgeContent={17} color="error">
-                            <NotificationsIcon style={{ color: '#146C94' }}/>
-                        </Badge>
-                    </IconButton>
+                    
                     <IconButton
                         size="large"
                         edge="end"
@@ -194,7 +181,7 @@ export default function Apphead () {
                         onClick={handleProfileMenuOpen}
                         color="inherit"
                         >
-                        <AccountCircle style={{ color: '#146C94' }}/>
+                        <AccountCircle style={{ color: '#19A7CE' }}/>
                     </IconButton>
                 </Box>
                 <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
@@ -206,15 +193,18 @@ export default function Apphead () {
                         onClick={handleMobileMenuOpen}
                         color="inherit"
                         >
-                        <MoreIcon style={{ color: '#146C94' }}/>
+                        <MoreIcon style={{ color: '#19A7CE' }}/>
                     </IconButton>
                 </Box>
             </Toolbar>
         </AppBar>
         {renderMobileMenu}
         {renderMenu}
+        <div>
+            <MNGcard />
+        </div>
 
-        <MNGcard/>
+        
     </Box>
 
     

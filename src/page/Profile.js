@@ -4,7 +4,7 @@ import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import NavbarC from '../components/NavbarC'
-import Footer from './Footer'
+import Footer from '../components/Footer'
 
 import './Profile.css'
 

@@ -1,38 +1,15 @@
-import * as React from 'react';
-import PropTypes from 'prop-types';
-import Typography from '@mui/material/Typography';
-import Skeleton from '@mui/material/Skeleton';
-import Grid from '@mui/material/Grid';
+import React from 'react'
+import Barchart from '../components/MNGcomp/Barchart'
+import LineChart from '../components/MNGcomp/LineChart'
 
-const variants = ['h1', 'h3', 'body1', 'caption'];
-
-function TypographyDemo(props) {
-  const { loading = false } = props;
-
+function Contact() {
   return (
     <div>
-      {variants.map((variant) => (
-        <Typography component="div" key={variant} variant={variant}>
-          {loading ? <Skeleton /> : variant}
-        </Typography>
-      ))}
+      Contact
+      
+      <LineChart/>
     </div>
-  );
+  )
 }
 
-TypographyDemo.propTypes = {
-  loading: PropTypes.bool,
-};
-
-export default function SkeletonTypography() {
-  return (
-    <Grid container spacing={8}>
-      <Grid item xs>
-        <TypographyDemo loading />
-      </Grid>
-      <Grid item xs>
-        <TypographyDemo />
-      </Grid>
-    </Grid>
-  );
-}
+export default Contact

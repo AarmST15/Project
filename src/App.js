@@ -1,7 +1,7 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavbarC from './components/NavbarC';
-import Footer from './page/Footer';
+
 import PathRoute from './page/PathRoute';
 
 function App() {

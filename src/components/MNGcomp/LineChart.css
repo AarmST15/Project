@@ -1,0 +1,37 @@
+.chart-container {
+  position: relative;
+  height: 400px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* กำหนดสีของขอบและพื้นหลัง */
+.chart-container canvas {
+  border-radius: 10px;
+  background-color: #F6F1F1;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid #F6F1F1;
+}
+
+/* กำหนดสีของตัวหนังสือและขนาดของตัวอักษร */
+.chart-container .chartjs-text {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* กำหนดสีของเส้นกราฟและขนาดของตัวอักษรบนแกน x และ y */
+.chart-container .chartjs-render-monitor {
+  font-size: 14px;
+  font-weight: bold;
+  color: #999;
+}
+
+/* กำหนดสีของแท่งแต่ละตัว */
+.chart-container .chartjs-render-monitor .chartjs-dataset-0 {
+  background-color: #007bff;
+}
+
+.chart-container .chartjs-render-monitor .chartjs-dataset-1 {
+  background-color: #28a745;
+}
