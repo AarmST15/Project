@@ -10,3 +10,12 @@ table.dataTable thead .sorting_desc_disabled:after,
 table.dataTable thead .sorting_desc_disabled:before {
   bottom: .5em;
 }
+
+.mng-setting-bg{
+  background: rgb(212,231,236);
+    background: linear-gradient(0deg, rgba(212,231,236,1) 0%, rgba(246,241,241,1) 100%);
+    padding: 30px;
+    padding-top: 94px;
+    padding-left: 109.01px;
+    padding-bottom: 82px;
+}

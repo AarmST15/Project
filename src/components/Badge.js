@@ -1,5 +1,6 @@
-import { MDBBadge, MDBBtn,MDBRow, MDBCol, MDBTable, MDBTableHead, MDBTableBody } from 'mdb-react-ui-kit';
+import { MDBBadge } from 'mdb-react-ui-kit';
 import * as React from 'react';
+import { useState } from "react"
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import Button from '@mui/material/Button';
@@ -12,10 +13,12 @@ import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import Grid from '@mui/material/Grid';
+import { Dialog, DialogTitle, DialogContent, DialogContentText, DialogActions } from "@mui/material";
 
 
 import './Badge.css'
 import Tabelpayment from './Tabelpayment';
+import Steppayment from './Steppaymennt';
 
 
 // function openNav() {
@@ -37,6 +40,17 @@ export default function Badge() {
     
         setState({ ...state, [side]: open });
       };
+
+      
+        const [open, setOpen] = useState(false);
+      
+        const handleOpen = () => {
+          setOpen(true);
+        };
+      
+        const handleClose = () => {
+          setOpen(false);
+        };
     
       const list = (side) => (
         <Box
@@ -113,9 +127,8 @@ export default function Badge() {
                     <Divider/>    
                 <ListItem disablePadding>
                     <ListItemButton 
-                      style={{display:"center" ,background:"#F8CBA6"}} 
-                      data-toggle="modal" data-target="#Payment" data-whatever="@mdo"
-                      >
+                      style={{display:"center" ,background:"#F8CBA6"}} onClick={handleOpen}
+                    >
                         Submit
                     </ListItemButton>
                 </ListItem>
@@ -128,61 +141,55 @@ export default function Badge() {
     return (
         <div>    
             
-        {['Viwe Cart'].map((side) => (
-        <React.Fragment key={side}>
-            <Button variant="contained" onClick={toggleDrawer(side, true)} style={{background:"#F8CBA6"}}>
-                {side}
-                <MDBBadge className='ms-2' color='danger' > 1 </MDBBadge>
-            </Button>          
-          <Drawer
-            side={side}
-            open={state[side]}
-            onClose={toggleDrawer(side, false)}
-          >
-            {list(side)}
-          </Drawer>
-        </React.Fragment>
-      ))}
+            {['Viwe Cart'].map((side) => (
+            <React.Fragment key={side}>
+                <Button variant="contained" onClick={toggleDrawer(side, true)} style={{background:"#F8CBA6"}}>
+                    {side}
+                    <MDBBadge className='ms-2' color='danger' > 1 </MDBBadge>
+                </Button>          
+                <Drawer
+                    side={side}
+                    open={state[side]}
+                    onClose={toggleDrawer(side, false)}
+                    >
+                    {list(side)}
+                </Drawer>
+            </React.Fragment>
+        ))}
 
-      <div class="modal fade" id="Payment" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div>
+            <Dialog open={open} onClose={handleClose}>
+                <DialogTitle>Payment</DialogTitle>
+                    <DialogContent>
+                        <DialogContentText>
+                            <Steppayment/>                            
+                        </DialogContentText>
+                    </DialogContent>
+                <DialogActions>
+                    <Button onClick={handleClose}>Close</Button>
+                </DialogActions>
+            </Dialog>
+        </div>
+
+            <div class="modal fade" id="GenQrcode" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Payment</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Qrcode</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
                 <div class="modal-body">              
-                    <Tabelpayment/>
+                <Tabelpayment/>
                     
                 </div>
                 <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#GenQrcode">Submit</button>
+                        <button type="button" class="btn btn-primary">Submit</button>
                 </div>
                 </div>
             </div> 
-        </div>
-
-        <div class="modal fade" id="GenQrcode" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Qrcode</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">              
-
-                
-              </div>
-              <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">Submit</button>
-              </div>
             </div>
-          </div> 
-        </div>
 
 
     </div>

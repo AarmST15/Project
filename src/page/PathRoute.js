@@ -10,15 +10,14 @@ import MNGsetting from '../page/manager/MNGsetting';
 import MNGorder from '../page/manager/MNGorder';
 import MNGstatement from '../page/manager/MNGstatement';
 import MNGorderhistory from '../page/manager/MNGorderhistory';
-import MNGbill from '../page/manager/MNGbill';
-import MNGstateday from '../page/manager/MNGstateday';
+import MNGclients from '../page/manager/MNGclients';
 import Profile from '../page/Profile'
 
 function PathRoute() {
   return (
     <div>
         <BrowserRouter>
-            <Routes>
+            <Routes>              
                 <Route path = "/" element={<Firstpage/>}/>
                 <Route path = "/home" element={<Home/>}/>
                 <Route path = "/onlineorders" element={<Onlineorders/>}/>
@@ -29,9 +28,8 @@ function PathRoute() {
                 <Route path = "/order" element={<MNGorder/>}/>
                 <Route path = "/statement" element={<MNGstatement/>}/>
                 <Route path = "/orderhis" element={<MNGorderhistory/>}/>
-                <Route path = "/bill" element={<MNGbill/>}/>
-                <Route path = "/stateday" element={<MNGstateday/>}/>
-                <Route path = "/profile" element={<Profile/>}/>
+                <Route path = "/clients" element={<MNGclients/>}/>                
+                <Route path = "/profile" element={<Profile/>}/>              
             </Routes>
         </BrowserRouter>
 

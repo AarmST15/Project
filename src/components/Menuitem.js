@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { MDBRow, MDBCol} from 'mdb-react-ui-kit';
+import React from 'react';
+import { MDBRow} from 'mdb-react-ui-kit';
 import './Menuitem.css'
 import Cardmenu from './Cardmenu';
 import coffees from '../data/coffees';

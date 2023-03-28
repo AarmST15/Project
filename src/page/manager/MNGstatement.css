@@ -1,27 +1,8 @@
-.mngorder-bg{
+.mng-state-bg{
     background: rgb(212,231,236);
     background: linear-gradient(0deg, rgba(212,231,236,1) 0%, rgba(246,241,241,1) 100%);
     padding: 30px;
     padding-top: 94px;
     padding-left: 109.01px;
     padding-bottom: 82px;
-}
-
-
-
-.card-stye{
-    text-align: center;    
-    
-}
-
-.card-design{
-    
-    background-color:#146C94;
-    margin: 10px;
-}
-
-.table-stye{
-    text-align: center;
-    
-    background-color:#FAEBCD;
 }

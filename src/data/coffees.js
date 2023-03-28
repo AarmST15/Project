@@ -1,7 +1,7 @@
 const coffees = [
     {
         title:"Espresso cup",
-        price:"50 $",
+        price:"50 ",
         detail:"I’m a dish description.",
         fullDetail:"I’m a dish description. Click “Edit Menu” to open the Restaurant Menu editor and change my text.",
         thumbnailUrl:"/images/coffee-01.jpg",
@@ -9,7 +9,7 @@ const coffees = [
     },
     {
         title:"Dalgona coffee",
-        price:"55 $",
+        price:"55 ",
         detail:"I’m a dish description.",
         fullDetail:"I’m a dish description. Click “Edit Menu” to open the Restaurant Menu editor and change my text.",
         thumbnailUrl:"/images/coffee-02.png",
@@ -17,7 +17,7 @@ const coffees = [
     },
     {
         title:"Late art",
-        price:"60 $",
+        price:"60 ",
         detail:"I’m a dish description.",
         fullDetail:"I’m a dish description. Click “Edit Menu” to open the Restaurant Menu editor and change my text.",
         thumbnailUrl:"/images/coffee-03.jpg",
@@ -25,7 +25,7 @@ const coffees = [
     },
     {
         title:"Fresh milk",
-        price:"45 $",
+        price:"45 ",
         detail:"I’m a dish description.",
         fullDetail:"I’m a dish description. Click “Edit Menu” to open the Restaurant Menu editor and change my text.",
         thumbnailUrl:"/images/coffee-04.jpg",

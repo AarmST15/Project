@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { MDBBtn } from 'mdb-react-ui-kit';
+import React from 'react';
 import './Header.css'
+import Button from '@mui/material/Button';
 
 
 export default function Header() {
@@ -12,9 +12,9 @@ export default function Header() {
           <div className='d-flex justify-content-center align-items-center h-100'>
             <div className='text-dark'>
               
-              <h1 className='mb-3'>POS</h1>
-              <h4 className='mb-3'>Cafe manatement system</h4>
-              
+              <h1 className='mb-1 text-header' >POS</h1>
+              <h4 className='mb-3 text-header'>Cafe manatement system</h4>
+              <Button variant="outlined" href='/onlineorders' style={{ backgroundColor: 'rgb(255, 251, 235, 0.5)' ,color:'#000' ,borderColor:'#000'}}>Online Orders</Button>
             </div>
           </div>
         </div>

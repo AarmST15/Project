@@ -1,79 +1,98 @@
 import React from 'react'
-import { MDBRow, MDBCol } from 'mdb-react-ui-kit';
-import './MNGorder.css'
+import { styled } from '@mui/material/styles';
+import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper';
+import Grid from '@mui/material/Grid';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import { MDBRow, MDBCol} from 'mdb-react-ui-kit';
+import Typography from '@mui/material/Typography';
+import { CardActionArea } from '@mui/material';
+import'./MNGorder.css'
+import Tableorder from '../../components/MNGcomp/Tabaleorder';
 
 function MNGorder() {
+    const Item = styled(Paper)(({ theme }) => ({
+        backgroundColor: theme.palette.mode === 'dark' ? '#000000' : '#fff',
+        ...theme.typography.body2,
+        padding: theme.spacing(2),
+        textAlign: 'center',
+        display: '',
+        color: theme.palette.text.secondary,
+    }));
+
     return (
-        <div>
-            MNGorder
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="/mnghome">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Order</li>
-                </ol>
-            </nav>
-            <div class="col-md-12 , histoy-button">
-                <button type="submit" class="btn btn-primary" href="/">Order History</button>
-            </div>  
+        <div className='mngorder-bg'>           
+              <h3 style={{color:'#000',marginBottom:'40px'}}>Manage Order</h3>
 
-            <MDBRow className='grid-stye'>
-                <MDBCol md='4' className='card-stye'>
-                    <h4>Order List</h4>
-                    <div className='card-design'>
-                        <div class="card , card-design">
-                        <div class="card-body">
-                            <h7>Username</h7>                        
-                            <div>Table : 3</div>                        
-                        </div>
-                        </div>
-                        <div class="card , card-design">
-                        <div class="card-body">
-                            <h7>Username</h7>                        
-                            <div>Table : 1</div>                        
-                        </div>
-                        </div>
-                        <div class="card , card-design">
-                        <div class="card-body">
-                            <h7>Username</h7>                        
-                            <div>Table : 5</div>                        
-                        </div>
-                        </div>                    
-                    </div>                   
+            <Box sx={{ flexGrow: 1 }}>
+                <Grid container spacing={3}>
+                    <Grid item xs={12} sm={4} md={4}>
 
-                </MDBCol>
-                <MDBCol md='8' className='table-stye'>
-                    <h4>List</h4>
-                    <h7>Table : 3</h7>
-                    <table class="table">
-                        <thead>
-                            <tr>
-                            <th scope="col">Menu Name</th>
-                            <th scope="col">Quantity</th>
-                            <th scope="col">Request</th>
+                        
+                        <h4>Order List</h4>
+                        <MDBRow className='row-cols-1 row-cols-md-1 g-2'>
+                        <Card sx={{ maxWidth: 500, borderRadius: '5rem', background:"#FFFBEB" ,display:"center"  }}>
+                            <CardActionArea data-toggle="modal" data-target="#exampleModal" >
+                                <CardContent>
+                                    
+                                    <Typography gutterBottom variant="h6" component="div" style={{align:"center" }}>
+                                        Username
+                                    </Typography>
+                                    <Typography variant="body1" color="text.secondary" align='center' >
+                                        Table : 3
+                                    </Typography>
+
+                                </CardContent>
+                            </CardActionArea>
+                        </Card>
+                        <Card sx={{ maxWidth: 500, borderRadius: '5rem', background:"#FFFBEB" ,display:"center"  }}>
+                            <CardActionArea data-toggle="modal" data-target="#exampleModal" >
+                                <CardContent>
+                                    
+                                    <Typography gutterBottom variant="h6" component="div" style={{align:"center" }}>
+                                        Username
+                                    </Typography>
+                                    <Typography variant="body1" color="text.secondary" align='center' >
+                                        Table : 3
+                                    </Typography>
+                                    
+                                </CardContent>
+                            </CardActionArea>
+                        </Card>
+                        <Card sx={{ maxWidth: 500, borderRadius: '5rem', background:"#FFFBEB" ,display:"center"  }}>
+                            <CardActionArea data-toggle="modal" data-target="#exampleModal" >
+                                <CardContent>
+                                    
+                                    <Typography gutterBottom variant="h6" component="div" style={{align:"center" }}>
+                                        Username
+                                    </Typography>
+                                    <Typography variant="body1" color="text.secondary" align='center' >
+                                        Table : 3
+                                    </Typography>
+                                    
+                                </CardContent>
+                            </CardActionArea>
+                        </Card>
+                        </MDBRow>
+                        
+                        
+                    </Grid>
+
+                    <Grid item xs={12} sm={8} md={8}>
+                        <Item>
+                        <h4>Order Detail</h4>
+                            <Tableorder/>
+
                             
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            
-                            </tr>
-                            <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                    <div class="col-md-12">
-                        <button type="submit" class="btn btn-primary">Done</button>
-                    </div>               
-                </MDBCol>
-            </MDBRow>       
+                        </Item>
+                    </Grid>
+
+                    
+
+                     
+                </Grid>
+            </Box>          
         </div>
     )
 }

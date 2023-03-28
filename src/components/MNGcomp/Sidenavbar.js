@@ -7,6 +7,8 @@ import ReceiptOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
 import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined";
 import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
+import HistoryIcon from '@mui/icons-material/History';
+import TableChartIcon from '@mui/icons-material/TableChart';
 import Tooltip from '@mui/material/Tooltip';
 import Apphead from './Apphead';
 import './Sidenavbar.css'
@@ -49,12 +51,12 @@ function Sidenavbar() {
                 <Tooltip title="Clients" placement="left">
                     <MenuItem icon={<PeopleOutlinedIcon className='side-color'/>}>Clients</MenuItem>
                 </Tooltip>
-                <Tooltip title="Home" placement="left">
-                    <MenuItem icon={<ContactsOutlinedIcon className='side-color'/>}>Contacts</MenuItem>
+                <Tooltip title="History" placement="left">
+                    <MenuItem icon={<HistoryIcon className='side-color'/>}>History</MenuItem>
                 </Tooltip>
                 
-                <Tooltip title="Home" placement="left">
-                    <MenuItem icon={<HelpOutlineOutlinedIcon className='side-color'/>}>FAQ</MenuItem>
+                <Tooltip title="Statement" placement="left">
+                    <MenuItem icon={<TableChartIcon className='side-color'/>}>Statement</MenuItem>
                 </Tooltip>
                 <Tooltip title="Home" placement="left">
                     <MenuItem icon={<CalendarTodayOutlinedIcon className='side-color'/>}>Calendar</MenuItem>

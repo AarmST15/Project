@@ -1,13 +1,12 @@
 import React from 'react'
-import'./MNGorderhistory.css'
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
+import Tableclients from '../../components/MNGcomp/Tableclients';
+import'./MNGclients.css'
 
-import Tablehistiory from '../../components/MNGcomp/Tablehistiory';
-
-function MNGorderhistory() {
+function MNGclients() {
   const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#000000' : '#fff',
     ...theme.typography.body2,
@@ -16,23 +15,24 @@ function MNGorderhistory() {
     display: '',
     color: theme.palette.text.secondary,
 }));
+
+
   return (
-    <div className='mng-his-bg'>
-      <h3 style={{color:'#000',marginBottom:'40px'}}>History Table</h3>
+    <div className='mng-clients-bg'>
+    <h3 style={{color:'#000',marginBottom:'40px'}}>Clients Table</h3>
         <Box sx={{ flexGrow: 1 }}>
             <Grid container spacing={1}>
                 <Grid item xs={12} sm={12} md={12}>
                 <Item>
+                    <Tableclients/>
                     
-                    <Tablehistiory/>
                 </Item>
                 </Grid>
             </Grid>
         </Box>        
+      </div>
 
-
-    </div>
   )
 }
 
-export default MNGorderhistory
+export default MNGclients
