@@ -46,7 +46,7 @@ export default function Carousel() {
       src='./images/carousel-04.jpg'      
       >
       <div>
-      <h5 className='mb-3'>First slide label</h5>
+      <h5 >First slide label</h5>
       <p className='mb-3'>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
       </div>
     </MDBCarouselItem>
