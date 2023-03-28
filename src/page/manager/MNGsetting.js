@@ -5,7 +5,8 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import Tablemenu from '../../components/MNGcomp/Tablemenu';
-
+import Test from '../../components/MNGcomp/Test';
+import Sidenavbar from '../../components/MNGcomp/Sidenavbar';
 
 function MNGsetting() {
     const Item = styled(Paper)(({ theme }) => ({
@@ -19,12 +20,13 @@ function MNGsetting() {
 
   return (
     <div className='mng-setting-bg'>
+        <Sidenavbar/>
         <h3 style={{color:'#000',marginBottom:'40px'}}>Menu Table</h3>
         <Box sx={{ flexGrow: 1 }}>
             <Grid container spacing={1}>
                 <Grid item xs={12} sm={12} md={12}>
                 <Item>
-                    
+                    {/* <Test/> */}
                     <Tablemenu/>
                 </Item>
                 </Grid>

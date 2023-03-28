@@ -5,6 +5,7 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import Table from '../../components/MNGcomp/Table'
+import Sidenavbar from '../../components/MNGcomp/Sidenavbar';
 
 function MNGstatement() {
   const Item = styled(Paper)(({ theme }) => ({
@@ -17,6 +18,7 @@ function MNGstatement() {
 }));
   return (
     <div className='mng-state-bg'>
+      <Sidenavbar/>
       <h3 style={{color:'#000',marginBottom:'40px'}}>Statement Table</h3>
         <Box sx={{ flexGrow: 1 }}>
             <Grid container spacing={1}>

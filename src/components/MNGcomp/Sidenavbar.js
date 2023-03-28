@@ -2,10 +2,8 @@ import React from 'react'
 import { Sidebar, Menu, MenuItem, useProSidebar } from 'react-pro-sidebar';
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import PeopleOutlinedIcon from "@mui/icons-material/PeopleOutlined";
-import ContactsOutlinedIcon from "@mui/icons-material/ContactsOutlined";
 import ReceiptOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
 import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined";
-import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import HistoryIcon from '@mui/icons-material/History';
 import TableChartIcon from '@mui/icons-material/TableChart';
@@ -26,8 +24,8 @@ function Sidenavbar() {
                     top: "0", 
                     left: "0",
                     marginBlock:"64px" ,
-                    backdropFilter:"blur(6px)"
-                    
+                    backdropFilter:"blur(6px)",
+                    zIndex:'1'                    
                     }}>
             <Menu>
                 
@@ -42,25 +40,23 @@ function Sidenavbar() {
                     <h2>Admin</h2>
                 </MenuItem>
                 
-                <Tooltip title="Home" placement="left">
+                <Tooltip title="Home" placement="left" href='/mnghome'>
                     <MenuItem icon={<HomeOutlinedIcon className='side-color'/>}>Home</MenuItem>
                 </Tooltip>
-                <Tooltip title="Order List" placement="left">
+                <Tooltip title="Order List" placement="left" href='/order'>
                     <MenuItem icon={<ReceiptOutlinedIcon className='side-color'/>}>Order List</MenuItem>
                 </Tooltip>
-                <Tooltip title="Clients" placement="left">
+                <Tooltip title="Clients" placement="left" href='/clients'>
                     <MenuItem icon={<PeopleOutlinedIcon className='side-color'/>}>Clients</MenuItem>
                 </Tooltip>
-                <Tooltip title="History" placement="left">
+                <Tooltip title="History" placement="left" href='/orderhis'>
                     <MenuItem icon={<HistoryIcon className='side-color'/>}>History</MenuItem>
                 </Tooltip>
                 
-                <Tooltip title="Statement" placement="left">
-                    <MenuItem icon={<TableChartIcon className='side-color'/>}>Statement</MenuItem>
+                <Tooltip title="Menu Manage" placement="left" href='/setting'>
+                    <MenuItem icon={<TableChartIcon className='side-color'/>}>Menu Manage</MenuItem>
                 </Tooltip>
-                <Tooltip title="Home" placement="left">
-                    <MenuItem icon={<CalendarTodayOutlinedIcon className='side-color'/>}>Calendar</MenuItem>
-                </Tooltip>
+                
             </Menu>
       </Sidebar>
         

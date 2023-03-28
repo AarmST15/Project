@@ -10,6 +10,7 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import'./MNGorder.css'
 import Tableorder from '../../components/MNGcomp/Tabaleorder';
+import Sidenavbar from '../../components/MNGcomp/Sidenavbar';
 
 function MNGorder() {
     const Item = styled(Paper)(({ theme }) => ({
@@ -22,7 +23,11 @@ function MNGorder() {
     }));
 
     return (
-        <div className='mngorder-bg'>           
+        <div>
+            <Sidenavbar/> 
+        <div className='mngorder-bg'>
+
+                      
               <h3 style={{color:'#000',marginBottom:'40px'}}>Manage Order</h3>
 
             <Box sx={{ flexGrow: 1 }}>
@@ -93,6 +98,7 @@ function MNGorder() {
                      
                 </Grid>
             </Box>          
+        </div>
         </div>
     )
 }

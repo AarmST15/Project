@@ -29,13 +29,7 @@ function Cardmenu(props) {
 
   const [price, setPrice] = useState(50); // ราคาเริ่มต้น
   
-  constructor(props) {
-    super(props);
-    this.state = {
-      clicks: 0,
-      show: true
-    };
-  }
+  
   
 
   return (

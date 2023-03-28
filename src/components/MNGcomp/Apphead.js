@@ -197,10 +197,7 @@ export default function Apphead () {
             </Toolbar>
         </AppBar>
         {renderMobileMenu}
-        {renderMenu}
-        <div>
-            <MNGcard />
-        </div>
+        {renderMenu}      
 
         
     </Box>
