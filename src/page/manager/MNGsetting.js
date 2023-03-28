@@ -13,8 +13,6 @@ function MNGsetting() {
         backgroundColor: theme.palette.mode === 'dark' ? '#000000' : '#fff',
         ...theme.typography.body2,
         padding: theme.spacing(2),
-        textAlign: 'center',
-        display: '',
         color: theme.palette.text.secondary,
     }));
 

@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useState } from "react"
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import Table from '@mui/material/Table';
@@ -13,18 +14,18 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
 import { visuallyHidden } from '@mui/utils';
+import { Button, Dialog, DialogTitle, DialogContent, DialogContentText, DialogActions } from "@mui/material";
+import Form from 'react-bootstrap/Form';
 
 function createData(idname, name,  detail, price, img, category) {  
     return { idname, name, detail, price, img, category };
 }
 
-const rows = [
-  
+const rows = [  
   createData('000111', 'coffee', 'xxxxxxxxx', 50, '/images/coffee-01.jpg', 'coffee'),
   createData('000112', 'thaitea', 'xxxxxxxxx', 55, '/images/coffee-03.jpg', 'tea'),
   createData('000113', 'givi', 'xxxxxxxxx', 60, '/images/coffee-02.jpg', 'soda'),
-  createData('000114', 'Coaco', 'xxxxxxxxx', 75, '/images/coffee-04.jpg', 'milk'),
-  
+  createData('000114', 'Coaco', 'xxxxxxxxx', 75, '/images/coffee-04.jpg', 'milk'),  
 ];
 
 function descendingComparator(a, b, orderBy) {
@@ -159,7 +160,7 @@ function EnhancedTableToolbar() {
           id="tableTitle"
           component="div"
         >
-          Members
+          Manage menu
         </Typography>  
     </Toolbar>
   );
@@ -193,8 +194,21 @@ export default function EnhancedTable() {
   const emptyRows =
     page > 0 ? Math.max(0, (1 + page) * rowsPerPage - rows.length) : 0;
 
+  const [open, setOpen] = useState(false);
+      
+  const handleOpen = () => {
+  setOpen(true);
+  };
+  
+  const handleClose = () => {
+  setOpen(false);
+    };
+
   return (
-    <Box sx={{ width: '100%' }}>
+    <div>
+    <Box sx={{ width: '100%' }}>              
+									<button type="submit" class="btn btn" style={{marginBottom:'15px', display:'block'}} onClick={handleOpen} >Add</button>								
+
         <Paper sx={{ width: '100%', mb: 2 }}>
             {/* Toolbar */}
             <EnhancedTableToolbar />  
@@ -260,7 +274,52 @@ export default function EnhancedTable() {
                 onRowsPerPageChange={handleChangeRowsPerPage}
             />
         </Paper>
-      
+
+        {/* Modal add data */}
+        <div>
+            <Dialog open={open} onClose={handleClose}>
+                <DialogTitle>Add Menu</DialogTitle>
+                    <DialogContent>
+                        <DialogContentText>
+                            <Box sx={{ width: '100%' }}>
+                                <form class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="menuname" class="form-label">Name</label>
+                                        <input type="text" class="form-control" id="menuname"/>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="price" class="form-label">Price</label>
+                                        <input type="int" class="form-control" id="price"/>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="detail" class="form-label">Details</label>
+                                        <input type="text" class="form-control" id="detail" placeholder="I’m a dish description."/>
+                                    </div>
+                                    <Form.Group controlId="formFile" className="mb-3">
+                                        <Form.Label>Default file input example</Form.Label>
+                                        <Form.Control type="file" />
+                                    </Form.Group>                
+                                    <div class="col-md-4">
+                                        <label for="inputState" class="form-label">Category</label>
+                                        <select id="inputState" class="form-select">
+                                        <option selected>Choose...</option>
+                                        <option>Coffe</option>
+                                        <option>Tea</option>
+                                        <option>Milk</option>
+                                        <option>Soda</option>
+                                        <option>Bakery & Sweet</option>                    
+                                        </select>
+                                    </div>
+                                </form>
+                            </Box>
+                        </DialogContentText>
+                    </DialogContent>
+                <DialogActions>
+                    <Button onClick={handleClose}>Add</Button>
+                </DialogActions>
+            </Dialog>
+        </div>
     </Box>
+    </div>
   );
 }

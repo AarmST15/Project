@@ -8,10 +8,10 @@ const data = {
     labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
     datasets: [
       {
-        label: 'Website Users',
+        label: 'income',
         data: [1500, 1800, 2000, 1900, 2200, 2400, 2300, 2500, 2700, 3000, 2800, 3200],
-        backgroundColor: ['rgba(54, 162, 235, 0.2)','rgba(255, 99, 132, 0.2)'],
-        borderColor: ['rgb(54, 162, 235)','rgb(255, 99, 132)'],      
+        backgroundColor: ['rgba(54, 162, 235, 0.2)'],
+        borderColor: ['rgb(54, 162, 235)'],      
         borderWidth: 1
       },
       
@@ -35,10 +35,7 @@ const Barchart = () => {
   return (
     <div>
       <h6>Total Spent</h6>
-      <Bar      
-      data={data} 
-      options={options}
-      />
+      <Bar data={data} options={options} />
     </div>
   )
 }

@@ -14,17 +14,19 @@ import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
 import { visuallyHidden } from '@mui/utils';
 
-function createData(idname, name,  detail, price, img, category) {  
-    return { idname, name, detail, price, img, category };
+function createData(trackingno, menuname, price, totalorder) { 
+    const totalamount = price * totalorder;
+  return { trackingno, menuname, price, totalorder, totalamount };
 }
 
 const rows = [
   
-  createData('000111', 'coffee', 'xxxxxxxxx', 50, '/images/coffee-01.jpg', 'coffee'),
-  createData('000112', 'thaitea', 'xxxxxxxxx', 55, '/images/coffee-03.jpg', 'tea'),
-  createData('000113', 'givi', 'xxxxxxxxx', 60, '/images/coffee-02.jpg', 'soda'),
-  createData('000114', 'Coaco', 'xxxxxxxxx', 75, '/images/coffee-04.jpg', 'milk'),
-  
+    createData('000001', 'aaaaaa', 60, 20),
+    createData('000002', 'bbbbbb', 55, 2),
+    createData('000003', 'cccccc', 40, 30),
+    createData('000004', 'dddddd', 45, 10),
+    createData('000005', 'eeeeee', 55, 8),
+    createData('000006', 'ffffff', 70, 5),
 ];
 
 function descendingComparator(a, b, orderBy) {
@@ -61,21 +63,15 @@ function stableSort(array, comparator) {
 
 const headCells = [
     { 
-        id: 'idname', 
-          label: 'Id-menuname', 
+        id: 'trackingno', 
+          label: 'Id-menumenuname', 
         minWidth: 150 
       },
       { 
-        id: 'name', 
-          label: 'Menu name', 
+        id: 'menuname', 
+          label: 'Menu menuname', 
         minWidth: 150 
-      },
-      {
-        id: 'detail',
-        label: 'detail',
-        minWidth: 170,
-        align: 'right',
-      },
+      },      
       {
         id: 'price',
         label: 'Price',
@@ -84,18 +80,18 @@ const headCells = [
         format: (value) => value.toLocaleString('en-US'),
       },
       {
-        id: 'img',
-        label: 'Img',
+        id: 'totalorder',
+        label: 'totalorder',
         minWidth: 150,
         align: 'right',       
     
       },
       {
-        id: 'category',
-        label: 'Category',
+        id: 'totalamount',
+        label: 'totalamount',
         minWidth: 150,
         align: 'right',
-        format: (value) => value.toFixed(2),
+        format: (value) => value.toLocaleString('en-US'),
       },
   
 ];
@@ -167,7 +163,7 @@ function EnhancedTableToolbar() {
 
 export default function EnhancedTable() {
   const [order, setOrder] = React.useState('asc');
-  const [orderBy, setOrderBy] = React.useState('name');  
+  const [orderBy, setOrderBy] = React.useState('menuname');  
   const [page, setPage] = React.useState(0);
   const [dense, setDense] = React.useState(false);
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
@@ -218,7 +214,7 @@ export default function EnhancedTable() {
                         const labelId = `enhanced-table-checkbox-${index}`;
 
                         return (
-                            <TableRow key={row.idname} sx={{ cursor: 'pointer' }} >
+                            <TableRow key={row.trackingno} sx={{ cursor: 'pointer' }} >
                                 <TableCell >
                                     
                                 </TableCell>
@@ -228,13 +224,12 @@ export default function EnhancedTable() {
                                     scope="row"
                                     padding="none"
                                 >
-                                    {row.idname}
+                                    {row.trackingno}
                                 </TableCell>
-                                <TableCell align="left">{row.name}</TableCell>
-                                <TableCell align="left">{row.detail}</TableCell>
+                                <TableCell align="left">{row.menuname}</TableCell>                                
                                 <TableCell align="right">{row.price}</TableCell>
-                                <TableCell align="left">{row.img}</TableCell>
-                                <TableCell align="left">{row.category}</TableCell>
+                                <TableCell align="right">{row.totalorder}</TableCell>
+                                <TableCell align="right">{row.totalamount}</TableCell>
                                 <TableCell>
 									<button type="submit" class="btn btn-danger">delete</button>
 								</TableCell>

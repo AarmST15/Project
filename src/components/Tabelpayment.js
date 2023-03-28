@@ -6,8 +6,9 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import Toolbar from '@mui/material/Toolbar';
 
-const TAX_RATE = 0.07;
+const Point = 1000;
 
 function ccyFormat(num) {
   return `${num.toFixed(2)}`;
@@ -26,20 +27,42 @@ function subtotal(items) {
   return items.map(({ price }) => price).reduce((sum, i) => sum + i, 0);
 }
 
+
 const rows = [
-  createRow('Paperclips (Box)', 100, 1.15),
-  createRow('Paper (Case)', 10, 45.99),
-  createRow('Waste Basket', 2, 17.99),
+  createRow('coffee', 1, 50),
+  createRow('milk', 1, 60),
+  createRow('soda', 2, 45),
 ];
 
 const invoiceSubtotal = subtotal(rows);
-const invoiceTaxes = TAX_RATE * invoiceSubtotal;
-const invoiceTotal = invoiceTaxes + invoiceSubtotal;
+const invoicePoint  = Point / 100  ;
+const invoiceTotal = invoiceSubtotal - invoicePoint   ;
 
 export default function SpanningTable() {
   return (
     <TableContainer component={Paper}>
+      
+      <Table sx={{ minWidth: 300 , align:'start' }} >
+      <TableBody>
+      <TableRow>
+            <TableCell rowSpan={3} />
+            <TableCell >Username</TableCell>
+            <TableCell align="right">xxxx</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell >Date</TableCell>
+            <TableCell align="right">00/00/000</TableCell>
+            
+          </TableRow>
+          <TableRow>
+            <TableCell >No. table</TableCell>
+            <TableCell align="right">6</TableCell>
+          </TableRow>
+
+      </TableBody>
+      </Table>
       <Table sx={{ minWidth: 300 }} aria-label="spanning table">
+        
         <TableHead>
           <TableRow>
             <TableCell align="center" colSpan={3}>
@@ -48,7 +71,7 @@ export default function SpanningTable() {
             <TableCell align="right">Price</TableCell>
           </TableRow>
           <TableRow>
-            <TableCell>Desc</TableCell>
+            <TableCell>Menu name</TableCell>
             <TableCell align="right">Qty.</TableCell>
             <TableCell align="right">Unit</TableCell>
             <TableCell align="right">Sum</TableCell>
@@ -69,15 +92,15 @@ export default function SpanningTable() {
             <TableCell colSpan={2}>Subtotal</TableCell>
             <TableCell align="right">{ccyFormat(invoiceSubtotal)}</TableCell>
           </TableRow>
-          {/* <TableRow>
-            <TableCell>Tax</TableCell>
-            <TableCell align="right">{`${(TAX_RATE * 100).toFixed(0)} %`}</TableCell>
-            <TableCell align="right">{ccyFormat(invoiceTaxes)}</TableCell>
+          <TableRow>
+            <TableCell>Point</TableCell>
+            <TableCell align="right">{`${(Point / 100).toFixed(0)} `}</TableCell>
+            <TableCell align="right">{ccyFormat(invoicePoint )}</TableCell>
           </TableRow>
           <TableRow>
             <TableCell colSpan={2}>Total</TableCell>
             <TableCell align="right">{ccyFormat(invoiceTotal)}</TableCell>
-          </TableRow> */}
+          </TableRow>
         </TableBody>
       </Table>
     </TableContainer>

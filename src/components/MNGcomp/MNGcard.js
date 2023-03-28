@@ -28,11 +28,11 @@ export default function MNGcard() {
                         <Item>
                             <Grid container spacing={2}>
                                 <Grid item xs={12} sm={4} md={4}>                                    
-                                    <img class="overflow-hidden" style={{height:"50px" ,width:"50px"}} src='./images/icon-01.png'/>     
+                                    <img class="overflow-hidden" style={{height:"50px" ,width:"50px"}} src='./images/icon-05.png'/>     
                                 </Grid>   
                                 <Grid item xs={12} sm={8} md={8}>
                                     <Grid item xs={12} md={12}>
-                                        All Spending
+                                        Day revenue
                                     </Grid>
                                     <Grid item xs={12} md={12}>
                                         <h5 className='mng-home-font-color'> ***</h5>
