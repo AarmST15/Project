@@ -55,20 +55,7 @@ export default function Steppayment() {
     setActiveStep(0);
   };
 
-  const Step1 = () => (
-    <Box sx={{ mb: 2 }}>
-      <Typography variant="h6">Step 1: Total payment</Typography>
-      <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-        <label htmlFor="amount">Amount</label>
-        <input type="number" id="amount" name="amount" required />
-      </Box>
-      <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-        <label htmlFor="cardNumber">Card Number</label>
-        <input type="text" id="cardNumber" name="cardNumber" required />
-      </Box>
-    </Box>
-  );
-
+  
   return (
     <Box sx={{ width: '100%' }}>
       <Stepper activeStep={activeStep}>

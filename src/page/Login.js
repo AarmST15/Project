@@ -12,6 +12,8 @@ import {
   MDBCheckbox
 }
 from 'mdb-react-ui-kit';
+import { Button, Dialog, DialogTitle, DialogContent, DialogContentText, DialogActions } from "@mui/material";
+import Form from 'react-bootstrap/Form';
 
 function Login() {
 
@@ -24,6 +26,20 @@ function Login() {
 
         setJustifyActive(value);
     };
+    const [open2, setOpen2] = useState(false);
+    const [open, setOpen] = useState(false);
+
+    const handleOpen = () => {
+        setOpen(true);
+      };
+
+      const handleOpen2 = () => {
+        setOpen2(true);
+      };
+    
+      const handleClose = () => {
+        setOpen(false);
+      };
 
   return (
     <div style={{ background: '#FFFBEB' ,height:'100vh'}}>
@@ -59,7 +75,7 @@ function Login() {
 
                 <div className="d-flex justify-content-between mx-4 mb-4">
                     
-                    <a  style={{ color: '#F8CBA6' }} href="!#">Forgot password?</a>
+                    <a  style={{ color: '#F8CBA6' }} onClick={handleOpen}>Forgot password?</a>
                 </div>
 
                 <MDBBtn className="mb-4 w-100" style={{ background: '#F8CBA6' }}>Sign in</MDBBtn>
@@ -90,6 +106,42 @@ function Login() {
         </MDBTabsContent>
 
     </MDBContainer>
+            <div>      
+                <Dialog open={open} onClose={handleClose}>
+                    <DialogTitle>Forgot Password</DialogTitle>
+                    <DialogContent> 
+                        <form class="row g-3">                       
+                            <div class="col-md-12">
+                                <label for="inputEmail4" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="inputEmail4"/>
+                            </div> 
+                        </form> 
+                    </DialogContent>
+                    <DialogActions>
+                        <Button onClick={handleOpen2}>Next</Button>
+                    </DialogActions>
+                </Dialog>
+            </div>
+
+            <div>      
+                <Dialog open2={open2} onClose={handleClose}>
+                    <DialogTitle>Forgot Password</DialogTitle>
+                    <DialogContent> 
+                        <form class="row g-3">                       
+                            <div class="col-md-6">
+                                <label for="inputPassword4" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="inputPassword4"/>
+                            </div>
+                        </form> 
+                    </DialogContent>
+                    <DialogActions>
+                        <Button onClick={handleClose}>submit</Button>
+                    </DialogActions>
+                </Dialog>
+            </div>
+
+
+
     </div>
   );
 }
