@@ -7,7 +7,6 @@ import {
   MDBTabsContent,
   MDBTabsPane,
   MDBBtn,
-  MDBIcon,
   MDBInput,
   MDBCheckbox
 }
@@ -26,19 +25,23 @@ function Login() {
 
         setJustifyActive(value);
     };
-    const [open2, setOpen2] = useState(false);
+
+    
     const [open, setOpen] = useState(false);
+    const [open2, setOpen2] = useState(false);
 
     const handleOpen = () => {
         setOpen(true);
       };
 
       const handleOpen2 = () => {
+        setOpen(false);
         setOpen2(true);
       };
     
       const handleClose = () => {
         setOpen(false);
+        setOpen2(false);
       };
 
   return (
@@ -106,7 +109,7 @@ function Login() {
         </MDBTabsContent>
 
     </MDBContainer>
-            <div>      
+                  
                 <Dialog open={open} onClose={handleClose}>
                     <DialogTitle>Forgot Password</DialogTitle>
                     <DialogContent> 
@@ -121,14 +124,14 @@ function Login() {
                         <Button onClick={handleOpen2}>Next</Button>
                     </DialogActions>
                 </Dialog>
-            </div>
+            
 
-            <div>      
-                <Dialog open2={open2} onClose={handleClose}>
+                 
+                <Dialog open={open2} onClose={handleClose}>
                     <DialogTitle>Forgot Password</DialogTitle>
                     <DialogContent> 
                         <form class="row g-3">                       
-                            <div class="col-md-6">
+                            <div class="col-md-12">
                                 <label for="inputPassword4" class="form-label">Password</label>
                                 <input type="password" class="form-control" id="inputPassword4"/>
                             </div>
@@ -138,7 +141,7 @@ function Login() {
                         <Button onClick={handleClose}>submit</Button>
                     </DialogActions>
                 </Dialog>
-            </div>
+            
 
 
 
