@@ -1,0 +1,11 @@
+2023-04-05 15:07:54 [server.js] error: /user => Field 'point' doesn't have a default value
+2023-04-05 15:26:47 [server.js] error: /user => Table 'testcms_pj.customer' doesn't exist
+2023-04-05 15:31:44 [server.js] error: /user/authn => User not found
+2023-04-05 15:33:21 [server.js] error: /user/authn => User not found
+2023-04-05 15:33:30 [server.js] error: /user/authn => Password incorrect.
+2023-04-05 15:42:41 [server.js] error: /user => You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INTO customer SET username = '1', email ='1' WHERE id_customer = '1'' at line 1
+2023-04-05 15:42:51 [server.js] error: /user => You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INTO customer SET username = '1', email ='1' WHERE id_customer = '2'' at line 1
+2023-04-05 15:42:59 [server.js] error: /user => You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INTO customer SET username = '1', email ='1' WHERE id_customer = '2'' at line 1
+2023-04-05 23:59:00 [server.js] info: [ schedule   ] IT IS TIME TO BACKUP!
+2023-04-05 23:59:00 [server.js] info: [ schedule   ] FOLDER NOT EXIST CREATE ONE!
+2023-04-05 23:59:00 [server.js] info: [ schedule   ] BACKUP FINISH :) filename TESTcms_pj___2023_04_05.sql

@@ -8,7 +8,7 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import Toolbar from '@mui/material/Toolbar';
 
-const Point = 1000;
+const TAX_RATE = 0.05;
 
 function ccyFormat(num) {
   return `${num.toFixed(2)}`;
@@ -35,8 +35,8 @@ const rows = [
 ];
 
 const invoiceSubtotal = subtotal(rows);
-const invoicePoint  = Point / 100  ;
-const invoiceTotal = invoiceSubtotal - invoicePoint   ;
+const invoiceTaxes = TAX_RATE * invoiceSubtotal;
+const invoiceTotal = invoiceTaxes + invoiceSubtotal;
 
 export default function SpanningTable() {
   return (
@@ -45,7 +45,7 @@ export default function SpanningTable() {
       <Table sx={{ minWidth: 300 , align:'start' }} >
       <TableBody>
       <TableRow>
-            <TableCell rowSpan={3} />
+            
             <TableCell >Username</TableCell>
             <TableCell align="right">xxxx</TableCell>
           </TableRow>
@@ -94,12 +94,16 @@ export default function SpanningTable() {
           </TableRow>
           <TableRow>
             <TableCell>Point</TableCell>
-            <TableCell align="right">{`${(Point / 100).toFixed(0)} `}</TableCell>
-            <TableCell align="right">{ccyFormat(invoicePoint )}</TableCell>
+            <TableCell align="right">{`${(TAX_RATE * 100).toFixed(0)} %`}</TableCell>
+            <TableCell align="right">{ccyFormat(invoiceTaxes)}</TableCell>
           </TableRow>
           <TableRow>
             <TableCell colSpan={2}>Total</TableCell>
             <TableCell align="right">{ccyFormat(invoiceTotal)}</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell colSpan={2}>Get point</TableCell>
+            <TableCell align="right">{ccyFormat(invoiceSubtotal)}</TableCell>
           </TableRow>
         </TableBody>
       </Table>

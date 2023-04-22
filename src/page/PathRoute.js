@@ -12,6 +12,9 @@ import MNGstatement from '../page/manager/MNGstatement';
 import MNGorderhistory from '../page/manager/MNGorderhistory';
 import MNGclients from '../page/manager/MNGclients';
 import Profile from '../page/Profile'
+import D from '../page/D'
+
+import Menuitem from '../components/temp/MenuItem'
 
 function PathRoute() {
   return (
@@ -21,7 +24,7 @@ function PathRoute() {
                 <Route path = "/" element={<Firstpage/>}/>
                 <Route path = "/home" element={<Home/>}/>
                 <Route path = "/onlineorders" element={<Onlineorders/>}/>
-                <Route path = "/about" element={<Contact/>}/>
+                <Route path = "/about" element={<D/>}/>
                 <Route path = "/login" element={<Login/>}/> 
                 <Route path = "/mnghome" element={<MNGhome/>}/> 
                 <Route path = "/setting" element={<MNGsetting/>}/> 
@@ -29,7 +32,11 @@ function PathRoute() {
                 <Route path = "/statement" element={<MNGstatement/>}/>
                 <Route path = "/orderhis" element={<MNGorderhistory/>}/>
                 <Route path = "/clients" element={<MNGclients/>}/>                
-                <Route path = "/profile" element={<Profile/>}/>              
+                <Route path = "/profile" element={<Profile/>}/>   
+
+
+                <Route path = "/temp" element={<Menuitem/>}/>              
+
             </Routes>
         </BrowserRouter>
 

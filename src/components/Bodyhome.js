@@ -24,9 +24,8 @@ export default function Bodyhome() {
                 <img class="overflow-hidden" style={{height:"220px" ,width:"400px" }} src='./images/Bodyhome-4.jpg'/>
             </Grid>
             <Grid item xs="auto" md="8" >
-                <h3 > Eat.</h3>               
-                Lunch and Artisanal Pastries
-                
+            <h4>Drink it and enjoy it.</h4>
+                First I drink the coffee. Then I do the things                
                      
             </Grid>
         </Grid>

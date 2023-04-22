@@ -1,0 +1,31 @@
+html {
+  font-size: calc(80%+0.8vmin);
+}
+
+.card-item{
+  margin: 1px;
+}
+
+.card-body{
+  display: block;
+  width: 60%; 
+
+}
+
+.menu-item{
+    display: block;
+    width: 100%;
+  }
+
+.img-modal{
+  border-radius: 50%;
+  width: 100px;
+  border: 1px ;
+}
+
+.text-modal{
+  text-align: end;
+  
+  
+  
+}

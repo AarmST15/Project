@@ -8,14 +8,27 @@ import Grid from '@mui/material/Grid';
 import Numberinde from '../components/Numberinde'
 import { Button, Dialog, DialogTitle, DialogContent, DialogContentText, DialogActions } from "@mui/material";
 import React, { Component , useState } from 'react';
-import Stack from '@mui/material/Stack';
-import Box from '@mui/material/Box';
+
 import './Numberinde.css'
-import Radiomenu from './Radiomenu';
+
+import Axios from 'axios';
 
 
 
 function Cardmenu(props) {
+    const [n_menu, setName] = useState("");
+    const [price, setprice] = useState(0);
+    const [type, setType] = useState("");
+    const [details, setdetails] = useState("");
+
+    const [menuList, setMenuList] = useState([]);
+
+    const getMenu = () => {
+        Axios.get("http://localhost:3111/getMenu").then((response) => {
+          setMenuList(response.data);
+        });
+      };
+
     const {coffee} = props;
     
     const [open, setOpen] = useState(false);
@@ -28,11 +41,8 @@ function Cardmenu(props) {
     setOpen(false);
   };
 
-  const [price, setPrice] = useState(50); // ราคาเริ่มต้น
   
   
-  
-
   return (
     <div>
         
@@ -49,7 +59,7 @@ function Cardmenu(props) {
                                         {coffee.detail}
                                     </Typography>
                                     <Typography variant="body2" display = "flex" justifyContent= "flex-end">
-                                        {/* {coffee.price} */} 
+                                        {coffee.price} 
                                     </Typography>
                                 </Grid>
                                 <Grid item xs={4} md={3}>
@@ -96,7 +106,7 @@ function Cardmenu(props) {
                         </form>
                         <Numberinde/>
                         
-                        <h5>Tolal  </h5> 
+                        <h5>Tolal {unit} </h5> 
                     </DialogContent>
                     <DialogActions>
                         <Button onClick={handleClose}>Send to cart</Button>

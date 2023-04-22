@@ -1,68 +1,56 @@
-import React from 'react'
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import Typography from '@mui/material/Typography';
-import { CardActionArea } from '@mui/material';
-import Grid from '@mui/material/Grid';
+import React, { Component } from 'react';
+import Stack from '@mui/material/Stack';
+import Box from '@mui/material/Box';
+import { Button} from "@mui/material";
 
-function Contact() {
-    const price = 10; // Replace 10 with your actual price value
-    const quantity = 2; // Replace 2 with your actual quantity value
-    const Totalprice = price * quantity;
-
-  return (
+class Numberinde extends Component {
+    
+    constructor(props) {
+      super(props);
+      this.state = {
+        clicks: 0,
+        show: true,
+        
+      };
+    }
+  
+    incrementValue = () => {
+      this.setState({ clicks: this.state.clicks + 1 });
+    }
+  
+    decreaseValue = () => {
+      this.setState({ clicks: this.state.clicks - 1 });
+    }
+  
+    render() {
+      const { clicks } = this.state;
+      return (
+        <div className='In-De-number'>
+          <Box >  
+            <Stack direction="row" spacing={2}>
+              <Button variant="outlined" onClick={this.incrementValue}>+</Button>
+  
+              { this.state.show ? <h6 className='text-num'>{ clicks }</h6> : '' }
+  
+              <Button variant="outlined" onClick={this.decreaseValue} >-</Button>
+            </Stack>
+            
+          </Box>   
+        </div>
+      );
+    }
+  }
+  
+  function Menuitem(props) {
+    const { clicks } = props;
+  
+    // ใช้ค่า clicks ที่ส่งเข้ามาใน function นี้ได้
+  
+    return (
     <div>
-      Contact
-      <Card sx={{ maxWidth: 500, background:"#FFFBEB" ,display:"center", marginBottom:"15px" }}>
-                    <CardActionArea data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
-                        <CardContent>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                            </button>
-                            <Grid container spacing={2}>
-                                <Grid item xs={8} md={9}>
-                                    <Typography gutterBottom variant="h6" component="div" style={{display:"flex" }}>
-                                        #menuname
-                                    </Typography>
-                                    
-                                    <Typography variant="body2" color="text.secondary" style={{display:"flex"  ,paddingTop:"10px"}}>
-                                        #detail
-                                    </Typography>
-                                    
-                                </Grid>
-
-                                <Grid item xs={4} md={3}>
-                                <Typography variant="body1" display = "flex" justifyContent= "flex-end">
-                                        {price}
-                                </Typography>
-                                <Typography variant="body2" display = "flex" justifyContent= "flex-end" paddingTop="25px">
-                                        {quantity}
-                                </Typography>
-                                                               
-                                </Grid>
-                            </Grid>
-                        </CardContent>
-                    </CardActionArea>
-                </Card>
-                      
-                <Grid container spacing={2}>
-                                <Grid item xs={8} md={9}>
-                                    <Typography gutterBottom variant="h8" component="div" style={{display:"flex" }}>
-                                        Total
-                                    </Typography>
-                                   
-                                    
-                                </Grid>
-                                <Grid item xs={4} md={3}>
-                                  <Typography variant="body1" display = "flex" justifyContent= "flex-end" style={{marginRight:'15px' }}>
-                                        {Totalprice}
-                                    </Typography>                               
-                                </Grid>
-                            </Grid>
-      
-      
-    </div>
-  )
-}
-
-export default Contact
+        <Numberinde clicks={clicks} />
+      <div>{ props.clicks }</div>
+      </div>
+    );
+  }
+  export default Menuitem

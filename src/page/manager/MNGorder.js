@@ -37,48 +37,24 @@ function MNGorder() {
                         
                         <h4>Order List</h4>
                         <MDBRow className='row-cols-1 row-cols-md-1 g-2'>
-                        <Card sx={{ maxWidth: 500, borderRadius: '5rem', background:"#FFFBEB" ,display:"center"  }}>
-                            <CardActionArea data-toggle="modal" data-target="#exampleModal" >
-                                <CardContent>
-                                    
-                                    <Typography gutterBottom variant="h6" component="div" style={{align:"center" }}>
-                                        Username
-                                    </Typography>
-                                    <Typography variant="body1" color="text.secondary" align='center' >
-                                        Table : 3
-                                    </Typography>
+                            <Card sx={{ maxWidth: 500, borderRadius: '5rem', background:"#FFFBEB" ,display:"center"  }}>
+                                <CardActionArea data-toggle="modal" data-target="#exampleModal" >
+                                    <CardContent>
+                                        
+                                        <Typography gutterBottom variant="h6" component="div" style={{align:"center" }}>
+                                            NO.Order x
+                                        </Typography>
+                                        <Typography gutterBottom variant="h7" component="div" style={{align:"center" }}>
+                                            Username
+                                        </Typography>
+                                        <Typography variant="body1" color="text.secondary" align='center' >
+                                            Table : 3
+                                        </Typography>
 
-                                </CardContent>
-                            </CardActionArea>
-                        </Card>
-                        <Card sx={{ maxWidth: 500, borderRadius: '5rem', background:"#FFFBEB" ,display:"center"  }}>
-                            <CardActionArea data-toggle="modal" data-target="#exampleModal" >
-                                <CardContent>
-                                    
-                                    <Typography gutterBottom variant="h6" component="div" style={{align:"center" }}>
-                                        Username
-                                    </Typography>
-                                    <Typography variant="body1" color="text.secondary" align='center' >
-                                        Table : 3
-                                    </Typography>
-                                    
-                                </CardContent>
-                            </CardActionArea>
-                        </Card>
-                        <Card sx={{ maxWidth: 500, borderRadius: '5rem', background:"#FFFBEB" ,display:"center"  }}>
-                            <CardActionArea data-toggle="modal" data-target="#exampleModal" >
-                                <CardContent>
-                                    
-                                    <Typography gutterBottom variant="h6" component="div" style={{align:"center" }}>
-                                        Username
-                                    </Typography>
-                                    <Typography variant="body1" color="text.secondary" align='center' >
-                                        Table : 3
-                                    </Typography>
-                                    
-                                </CardContent>
-                            </CardActionArea>
-                        </Card>
+                                    </CardContent>
+                                </CardActionArea>
+                            </Card>
+                        
                         </MDBRow>
                         
                         

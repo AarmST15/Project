@@ -20,7 +20,10 @@ export default function NavbarC() {
   return (
     <>  
     
-        <MDBNavbar expand='lg' light style={{background:"#F8CBA6"}}>
+        <MDBNavbar expand='lg' light style={{background:"#AACB73",
+                    top: "0", 
+                    
+                    zIndex:'2'}}>
             <MDBContainer fluid>
                 <MDBNavbarBrand href='/home'>
                     <img class="overflow-hidden" style={{height:"40px" ,width:"52px" }} src='./images/logo-3.png'/>
@@ -63,11 +66,12 @@ export default function NavbarC() {
                             </>
                             ) : (
                                 <MDBNavbarItem>
-                                    
+                                    <MDBNavbarLink href='/login'>Login</MDBNavbarLink>
                                 </MDBNavbarItem>
+                               
                         )}
                         <MDBNavbarItem>                                
-                                <MDBNavbarLink href='/profile'>profile</MDBNavbarLink>
+                                <MDBNavbarLink href='/profile'>Profile</MDBNavbarLink>
                         </MDBNavbarItem>
                         
                     </MDBNavbarNav>

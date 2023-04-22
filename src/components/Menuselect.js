@@ -4,32 +4,52 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+import { Axios } from 'axios';
+import { useState, useEffect } from "react";
+import { Category } from '@mui/icons-material';
 
-export default function Menuselect() {
-  const [type, setType] = React.useState('');
-
+export default function Menuselect( {coffeesList,setSerach_coffeesList}) {
+  const [type, setType] = useState('');
+  
+   useEffect(() => {
+     setSerach_coffeesList(coffeesList);
+  }, [coffeesList, setSerach_coffeesList]);
+  
   const handleChange = (event) => {
-    setType(event.target.value);
+    
+    if (event.target.value === 'all') {
+      setSerach_coffeesList(coffeesList);
+    } else {
+      const showlist = coffeesList.filter(coffee => coffee.type === event.target.value);
+      setSerach_coffeesList(showlist);
+    }    
+    
   };
-
+ 
+  
   return (
-    <Box sx={{ maxWidth: 200 , maxHeight: 90}}>
-      <FormControl fullWidth>
-        <InputLabel id="demo-simple-select-label">Category</InputLabel>
-        <Select
-          labelId="demo-simple-select-label"
-          id="demo-simple-select"
-          value={type}
-          label="Type"
-          onChange={handleChange}
-        >
-          <MenuItem value={10}>All</MenuItem>
-          <MenuItem value={20}>Coffee</MenuItem>
-          <MenuItem value={21}>Tea</MenuItem>
-          <MenuItem value={22}>Milk</MenuItem>
-          <MenuItem value={30}>Bakery & Sweet</MenuItem>
-        </Select>
-      </FormControl>
-    </Box>
+    
+    <div >
+    
+    <Box sx={{ maxWidth: 200 , maxHeight: 90 }}>
+      
+    <FormControl fullWidth>
+      <InputLabel id="demo-simple-select-label">Category</InputLabel>
+      <Select
+        labelId="demo-simple-select-label"
+        id="demo-simple-select"
+        value={type}
+        label="type"
+        onChange={handleChange}
+      >
+        <MenuItem value="all">All</MenuItem>
+        <MenuItem value="coffee">Coffee</MenuItem> 
+        <MenuItem value="Tea">Tea</MenuItem>
+        <MenuItem value="Milk">Milk</MenuItem> 
+        <MenuItem value="bakery">Bakery</MenuItem>       
+      </Select>
+    </FormControl>
+  </Box>
+  </div>
   );
 }

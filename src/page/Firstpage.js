@@ -21,7 +21,7 @@ function Firstpage() {
                         <img class="overflow-hidden" style={{height:"300px" ,width:"300px" , marginBottom:"7vh"}} src='./images/logo-2.png'/>
                         <Grid container spacing={2}>
                             <Grid item xs={12} md={6}>
-                                <Card sx={{ maxWidth: 500, background:"rgb(255, 231, 204)" , marginBottom:"15px" ,borderRadius:'5rem',}}>
+                                <Card sx={{ maxWidth: 500, background:"#FFD4D4" , marginBottom:"15px" ,borderRadius:'5rem',}}>
                                     <CardActionArea href='/home'>
                                         <CardContent>
                                            <h4>Guest </h4>                                           
@@ -31,7 +31,7 @@ function Firstpage() {
                                
                             </Grid>
                             <Grid item xs={12} md={6}>
-                                <Card sx={{ maxWidth: 500, background:"rgb(255, 231, 204)" , marginBottom:"15px",borderRadius:'5rem' }}>
+                                <Card sx={{ maxWidth: 500, background:"#FFD4D4" , marginBottom:"15px",borderRadius:'5rem' }}>
                                     <CardActionArea href='/login'>
                                         <CardContent> 
                                         <h4>Login / Register</h4>                                            
